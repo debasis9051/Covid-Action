@@ -59,7 +59,7 @@ var firebaseConfig = {
         let append1 = document.querySelector(".append")
 
         var cln = append1.cloneNode(true);
-        append1.after(cln)
+        // append1.after(cln)
 
 
 
