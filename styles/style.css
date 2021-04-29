@@ -1,0 +1,7 @@
+.spacer{
+    height: 90px;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly
+}
