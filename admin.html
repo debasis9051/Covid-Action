@@ -18,7 +18,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js" defer></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js" defer></script>
 
-<script  src="./scripts/app.js" defer></script>
+<script  src="./scripts/admin.js" defer></script>
 
 
 </head>
@@ -47,10 +47,10 @@
         <div class="form-row mt-3 ml-3  mr-3">
             <div class="col-md-2"></div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="first-name" placeholder="Name of the hospital">
+              <input type="text" class="form-control" id="HospitalName" placeholder="Name of the hospital">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="last-name" placeholder="Contact Person">
+              <input type="text" class="form-control" id="ContactName" placeholder="Contact Person">
             </div>
             <div class="col-md-2"></div>
           </div>
@@ -58,10 +58,10 @@
           <div class="form-row mt-3 ml-3  mr-3">
             <div class="col-md-2"></div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="first-name" placeholder="Contact number">
+              <input type="text" class="form-control" id="Contact" placeholder="Contact number">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="last-name" placeholder="Address/Area">
+              <input type="text" class="form-control" id="Address" placeholder="Address/Area">
             </div>
             <div class="col-md-2"></div>
           </div>
@@ -69,10 +69,10 @@
           <div class="form-row mt-3 ml-3  mr-3">
             <div class="col-md-2"></div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="first-name" placeholder="Rate">
+              <input type="text" class="form-control" id="Rate" placeholder="Rate">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="last-name" placeholder="Type">
+              <input type="text" class="form-control" id="Type" placeholder="Type">
             </div>
             <div class="col-md-2"></div>
           </div>
@@ -80,20 +80,29 @@
           <div class="form-row mt-3 ml-3  mr-3">
             <div class="col-md-2"></div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="first-name" placeholder="Available">
+              <input type="text" class="form-control" id="Available" placeholder="Available">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="last-name" placeholder="Verification">
+              <input type="text" class="form-control" id="Verification" placeholder="Verification">
             </div>
             <div class="col-md-2"></div>
           </div>
 
           <div class="form-row mt-3 ml-3  mr-3">
             <div class="col-md-2"></div>
-            <div class="form-group col-md-6">
-              <input type="text" class="form-control" id="first-name" placeholder="Comments">
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" id="Comments" placeholder="Comments">
             </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" id="TRtime" placeholder="Tentative Refilling Time">
+              </div>
             
             <div class="col-md-2"></div>
           </div>
+    </div>
+
+    <div class="spacer"></div>
+
+   <div class="dataSubmit text-center">
+        <button  type="button"class="btn btn-success" >Enter Data to Database</button>
     </div>
