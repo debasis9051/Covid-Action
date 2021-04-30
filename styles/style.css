@@ -2,7 +2,52 @@
     height: 90px;
 }
 .links{
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items :center;
 }
+.table-yellow{
+    background-color: rgb(151, 151, 58);
+}
+.table-yellow:hover{
+    background-color: rgb(114, 114, 53) !important;
+}
+
+/*Responsive Layout for tablet and Phablet*/
+@media only screen and (max-width: 1146px) {
+    .links{
+        display: none;
+        /* justify-content: center;
+        align-items :center; */
+    }
+    
+  
+   
+  
+   }
+  @media only screen and (max-width: 862px) {
+    .links{
+        display: none;
+        /* justify-content: center;
+        align-items :center; */
+    }
+    
+    
+    
+   }
+   
+   @media only screen and (max-width: 540px){
+    
+    .links{
+        display: none;
+        /* justify-content: center;
+        align-items :center; */
+    }
+    
+   }
+  
+   html,body, body:before, body:after{
+     padding: 0;
+     margin: 0;
+     overflow-x: hidden; 
+   }

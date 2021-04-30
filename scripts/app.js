@@ -13,53 +13,54 @@ var firebaseConfig = {
   firebase.analytics();
 
 
+//   var studentsDB= firebase.database().ref(`Oxygen/Vendors`);
+//   studentsDB.child(Date.now()).set({
+//       HospitalName: "Medica",
+//       ContactName: "Hritwick",
+//       Contact: 6289608042,
+//       Address: "ruby",
+//       Rate: 900,
+//       Type: "can refill",
+//       Available: "yes",
+//       TRtime: "31/04/21",
+//       Verification: "Yes 31/04/21 @3pm",
+//       Comments: "Visit directly incase they don't pick up call"
+//     })
 
-  var studentsDB= firebase.database().ref(`Oxygen/Vendors`);
-  studentsDB.child(`1212`.trim()).set({
-      Hospital :"peer",
-      Contact:9051459406,
-      Address :"em bypass",
-      Rate :600,
-      Type : "refil",
-      Available :"no"
-    })
+// Oxygen
+// 0: green
+// 1: red
+// 2: yellow
+// 3: orange
+// 4: default
 
     let pt = firebase.database().ref(`Oxygen`).get(`Vendors`)
-
     let vendorsDB
-     pt.then((value)=>{value.forEach((values)=>{
-           
+    pt.then((value)=>{value.forEach((values)=>{
         vendorsDB=values.val()
-        let vendors;
-        if(vendorsDB)
+        // console.log(vendorsDB)
+        let tb=``
+        let mapArr = {0: "table-success",1: "table-danger",2: "table-yellow",3: "table-warning",4: ""}
+        for(let i=0;i<Object.keys(vendorsDB).length;i++)
         {
-            vendors = Object.keys(vendorsDB)
-
+            let currentData = vendorsDB[Object.keys(vendorsDB)[i]];
+            console.log(currentData)
+            let tr= `<tr class="${mapArr[currentData.Status]}">
+                        <td>${currentData.HospitalName}</td>
+                        <td>${currentData.ContactName}</td>
+                        <td>${currentData.Contact}</td>
+                        <td>${currentData.Address}</td>
+                        <td>${currentData.Rate}</td>
+                        <td>${currentData.Type}</td>
+                        <td>${currentData.Available}</td>
+                        <td>${currentData.TRtime}</td>       
+                        <td>${currentData.Verification}</td>       
+                        <td>${currentData.Comments}</td>
+                    </tr>`
+            tb+=tr
         }
-
-        console.log(vendorsDB)
-
-        })})
-
-
-    //     let htmlElement =
-    //     `
-    //     <tr class="table-danger">
-    //     <th scope="row">Danger</th>
-    //     <td>Column content</td>
-    //     <td>Column content</td>
-    //     <td>Column content</td>
-    //     <td>Column content</td>
-    //     <td>Column content</td>
-    //     <td>Column content</td>
-    //     <td>Column content</td>       
-    //   </tr>
-    //     `
-
-        let append1 = document.querySelector(".append")
-
-        var cln = append1.cloneNode(true);
-        // append1.after(cln)
+        document.getElementById("tableBody").innerHTML = tb
+    })})
 
 
 
