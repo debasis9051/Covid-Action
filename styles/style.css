@@ -2,9 +2,14 @@
     height: 90px;
 }
 .links{
+    /* height : 9rem; */
     /* display: flex; */
-    justify-content: center;
-    align-items :center;
+    justify-content: space-between !important;
+    align-items :start !important;
+    /* overflow : hidden */
+}
+.links a{
+    margin: 10px;
 }
 .table-yellow{
     background-color: rgb(151, 151, 58);
@@ -15,22 +20,22 @@
 
 /*Responsive Layout for tablet and Phablet*/
 @media only screen and (max-width: 1146px) {
-    .links{
+    /* .links{
         display: none;
-        /* justify-content: center;
-        align-items :center; */
-    }
+        justify-content: center;
+        align-items :center;
+    } */
     
   
    
   
    }
   @media only screen and (max-width: 862px) {
-    .links{
+    /* .links{
         display: none;
-        /* justify-content: center;
-        align-items :center; */
-    }
+        justify-content: center;
+        align-items :center;
+    } */
     
     
     
@@ -38,11 +43,11 @@
    
    @media only screen and (max-width: 540px){
     
-    .links{
+    /* .links{
         display: none;
-        /* justify-content: center;
-        align-items :center; */
-    }
+        justify-content: center;
+        align-items :center;
+    } */
     
    }
   
