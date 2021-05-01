@@ -30,8 +30,55 @@
 
 }
 
+.flex1{
+    display:flex;
+    justify-content : space-between;
+}
+.flex1 a {
+    margin: 5px;
+}
    html,body, body:before, body:after{
      padding: 0;
      margin: 0;
      overflow-x: hidden; 
    }
+
+  
+
+
+
+   @media only screen and (max-width: 540px)
+   {
+    .flex1{
+        display:flex;
+        flex-direction :column;
+        justify-content : space-between;
+    }
+    .verifyLead{
+        width :100px;
+    }
+    #myModal {
+        position:absolute;
+        top : 20vh;
+    }
+ 
+   }
+
+
+   .modal-footer{
+       display: flex;
+       justify-content : space-between;
+   }
+
+   .modal-body{
+       margin: 0px !important;
+   }
+
+   #newDescription{
+       width :100%;
+   }
+
+   #myModal {
+    position:absolute;
+    top : 25vh;
+}

@@ -37,8 +37,8 @@ var firebaseConfig = {
                         <td>${currentData.Description}</td>
                         <td>${currentData.Status}</td>
                         <td>${currentData.Counter}</td>
-                        <td>
-                            <button class="btn btn-success" onclick="leadVerification(${Object.keys(vendorsDB)[i]})">Verify our Lead</button>
+                        <td class="flex1">
+                            <button class="btn btn-success verifyLead" onclick="leadVerification(${Object.keys(vendorsDB)[i]})">Verify our Lead</button>
                             <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
                         </td>
                     </tr>`
@@ -56,7 +56,7 @@ var firebaseConfig = {
                                                         <h4>Current Description</h4>
                                                         <p>${vendorsDB[key].Description}</p>
                                                         <h4>Update the description</h4>
-                                                        <textarea id="newDescription" style="resize: vertical;"></textarea>`
+                                                        <textarea id="newDescription" class="text-center" style="resize: vertical;"></textarea>`
     document.querySelector(".modal-footer").innerHTML = `   <button type="button" class="btn btn-outline-success" onclick="modalSubmit(${key},true)">Working</button>
                                                             <button type="button" class="btn btn-outline-danger" onclick="modalSubmit(${key},false)">Not Working</button>`
   }  

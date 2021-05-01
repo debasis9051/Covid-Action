@@ -1,4 +1,4 @@
 Todo List:
 1. Making Import program for excel database sheet
-2. verification Modal designing
+2. 
 3.
