@@ -30,9 +30,40 @@ document.querySelector(".dataSubmit").addEventListener("click",()=>{
             Description: description,
             Address: address,
             Verification: verification,
-            Counter: 1
+            Counter: 1,
+            Status: "Working"
         }).then(()=>{
             console.log("Data Uploaded")
         })
     }
 })
+
+
+function checkInputs(hospital,contact,description,address,verification,category)
+{
+    if(hospital && contact && description && address && verification && category!="Select Category..")
+    {       
+        console.log("True")
+        let error=document.querySelector(".error");
+        error.classList.toggle("alert-success",true)
+        error.style.display="block"
+        document.querySelector(".errorText").innerHTML="Data Uploaded to Crowd Sourcing Database"
+        setTimeout(()=>{
+            document.querySelector(".error").style.display="none"
+            error.classList.toggle("alert-success",false)}
+        ,8000)
+        return true
+    }
+    else {
+        console.log("False")
+        let error=document.querySelector(".error");
+        error.classList.toggle("alert-danger",true)
+        error.style.display="block"
+        document.querySelector(".errorText").innerHTML="Please enter data in all fields"
+        setTimeout(()=>{
+            document.querySelector(".error").style.display="none"
+            error.classList.toggle("alert-danger",false)}
+        ,8000)
+        return false
+    }
+}

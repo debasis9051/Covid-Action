@@ -12,38 +12,72 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-    let pt = firebase.database().ref(`Oxygen`).get(`Vendors`)
-    let vendorsDB
+  let cate
+  let vendorsDB
+  function displayData(category)
+  {
+    cate = category
+    let pt = firebase.database().ref(category).get(`Vendors`)
     pt.then((value)=>{value.forEach((values)=>{
         vendorsDB=values.val()
         let tb=``
-        let mapArr = {0: "table-success",1: "table-danger",2: "table-yellow",3: "table-warning",4: ""}
         for(let i=0;i<Object.keys(vendorsDB).length;i++)
         {
             let currentData = vendorsDB[Object.keys(vendorsDB)[i]];
-            console.log(currentData)
-            let tr= `<tr class="${mapArr[currentData.Status]}">
-                        <td>${currentData.HospitalName}</td>
-                        <td>${currentData.ContactName}</td>
+            // console.log(currentData)
+            let tr= `<tr>
+                        <td>${currentData.Organization}</td>
                         <td>${currentData.Contact}</td>
                         <td>${currentData.Address}</td>
-                        <td>${currentData.Rate}</td>
-                        <td>${currentData.Type}</td>
-                        <td>${currentData.Available}</td>
-                        <td>${currentData.TRtime}</td>       
-                        <td>${currentData.Verification}</td>       
-                        <td>${currentData.Comments}</td>
+                        <td>${currentData.Verification.replace("T"," @")}</td>
+                        <td>${currentData.Description}</td>
+                        <td>${currentData.Status}</td>
+                        <td>${currentData.Counter}</td>
+                        <td>
+                            <button class="btn btn-success" onclick="leadVerification(${Object.keys(vendorsDB)[i]})">Verify our Lead</button>
+                            <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
+                        </td>
                     </tr>`
             tb+=tr
         }
         document.getElementById("tableBody").innerHTML = tb
     })})
+  }
 
+  function leadVerification(key)
+  {
+    document.querySelector(".modal").style.display = "block"
+    document.querySelector(".modal-title").innerHTML = `Verified on ${vendorsDB[key].Verification.replace("T"," @")}`
+    document.querySelector(".modal-body").innerHTML = ` <h4>Current Description</h4>
+                                                        <p>${vendorsDB[key].Description}</p>
+                                                        <h4>Update the description</h4>
+                                                        <textarea id="newDescription" style="resize: vertical;"></textarea>`
+    document.querySelector(".modal-footer").innerHTML = `   <button type="button" class="btn btn-outline-success" onclick="modalSubmit(${key},true)">Working</button>
+                                                            <button type="button" class="btn btn-outline-danger" onclick="modalSubmit(${key},false)">Not Working</button>`
+  }  
 
+  function modalSubmit(key,check)
+  {
+    document.querySelector(".modal").style.display = "none"
+    let ref = firebase.database().ref(`${cate}/Vendors/${key}`)
+    let temp
+    if(check)
+        temp = {"Status": "Working"}
+    else
+        temp = {"Status": "Not Working"}
 
+    let newDesc = document.querySelector("#newDescription").value.trim()
+    if(newDesc)
+    {
+        temp["Description"] = newDesc
+    }
+    temp["Counter"] = vendorsDB[key].Counter + 1
 
-      
+    let p = ref.update(temp)
+    p.then(()=>location.reload())
+    p.catch(()=>console.log("Error uploading from modal"))
+  }   
 
-
+  displayData("Oxygen");
 
 

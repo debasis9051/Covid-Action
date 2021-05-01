@@ -8,7 +8,7 @@
     align-items :start !important;
     /* overflow : hidden */
 }
-.links a{
+#categories button{
     margin: 10px;
 }
 .table-yellow{
@@ -18,6 +18,17 @@
     background-color: rgb(114, 114, 53) !important;
 }
 
+.error{
+    display : none; 
+}
+/* .hidden{
+    display : none;
+    } */
+.errorText p{
+    
+    font-weight: bold;
+
+}
 
    html,body, body:before, body:after{
      padding: 0;
