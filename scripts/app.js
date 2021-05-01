@@ -17,10 +17,14 @@ var firebaseConfig = {
   function displayData(category)
   {
     cate = category
+    firebase.database().ref(category).once("value").then((snapshot)=>{
+        if(!snapshot.exists())
+            document.getElementById("tableBody").innerHTML = ""
+    })
     let pt = firebase.database().ref(category).get(`Vendors`)
     pt.then((value)=>{value.forEach((values)=>{
         vendorsDB=values.val()
-        let tb=``
+        let tb=""
         for(let i=0;i<Object.keys(vendorsDB).length;i++)
         {
             let currentData = vendorsDB[Object.keys(vendorsDB)[i]];
@@ -47,8 +51,9 @@ var firebaseConfig = {
   function leadVerification(key)
   {
     document.querySelector(".modal").style.display = "block"
-    document.querySelector(".modal-title").innerHTML = `Verified on ${vendorsDB[key].Verification.replace("T"," @")}`
-    document.querySelector(".modal-body").innerHTML = ` <h4>Current Description</h4>
+    document.querySelector(".modal-title").innerHTML = `Last verified on ${vendorsDB[key].Verification.replace("T"," @")}`
+    document.querySelector(".modal-body").innerHTML = ` <h4 id="modalNumber">${vendorsDB[key].Contact}<button class="btn btn-light ml-3" onclick="copyToClipboard()"><i class="fa fa-copy fa-lg"></i></button></h4>
+                                                        <h4>Current Description</h4>
                                                         <p>${vendorsDB[key].Description}</p>
                                                         <h4>Update the description</h4>
                                                         <textarea id="newDescription" style="resize: vertical;"></textarea>`
@@ -78,6 +83,15 @@ var firebaseConfig = {
     p.catch(()=>console.log("Error uploading from modal"))
   }   
 
-  displayData("Oxygen");
+  function copyToClipboard()
+  {
+    let temp = $("<input>")
+    $("body").append(temp)
+    temp.val($("#modalNumber").text()).select();
+    document.execCommand("copy");
+    temp.remove();
+  }
+
+  displayData("Hospital");
 
 
