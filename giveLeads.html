@@ -20,91 +20,69 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js" defer></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js" defer></script>
 
-<script  src="./scripts/admin.js" defer></script>
-
+<script  src="./scripts/giveLeads.js" defer></script>
 
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary font-weight-bold text-white bg-dark text-uppercase ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary font-weight-bold text-white bg-dark text-uppercase ">
         <a class="navbar-brand" href="/index.html">Covid Action</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse " id="menu">
         <ul class="navbar-nav mr-auto ">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="/index.html">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/admin.html">Admin</a>
+          <li class="nav-item  active">
+            <a class="nav-link" href="/giveLeads.html">Give Leads</a>
           </li>
         </ul>
       </div>   
     </nav>
 
     <div class="spacer"></div>
-
     <div class="data">
-
         <div class="form-row mt-3 ml-3  mr-3">
             <div class="col-md-2"></div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="HospitalName" placeholder="Name of the hospital">
+              <input type="text" class="form-control" id="Organization" placeholder="Name of the Organization/Dealer">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="ContactName" placeholder="Contact Person">
+              <input type="text" class="form-control" id="Contact" placeholder="Contact number of Organization/Dealer">
             </div>
             <div class="col-md-2"></div>
-          </div>
+        </div>
 
-          <div class="form-row mt-3 ml-3  mr-3">
-            <div class="col-md-2"></div>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="Contact" placeholder="Contact number">
-            </div>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="Address" placeholder="Address/Area">
-            </div>
-            <div class="col-md-2"></div>
+        <div class="form-row mt-3 ml-3  mr-3">
+          <div class="col-md-2"></div>
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="Description" placeholder="Description">
           </div>
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="Address" placeholder="Address/Area">
+          </div>
+          <div class="col-md-2"></div>
+        </div>
 
-          <div class="form-row mt-3 ml-3  mr-3">
-            <div class="col-md-2"></div>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="Rate" placeholder="Rate">
-            </div>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="Type" placeholder="Type">
-            </div>
-            <div class="col-md-2"></div>
+        <div class="form-row mt-3 ml-3  mr-3">
+          <div class="col-md-2"></div>
+          <div class="form-group col-md-4">
+            <input type="datetime-local" class="form-control" id="Verification" placeholder="Verified On">
           </div>
-
-          <div class="form-row mt-3 ml-3  mr-3">
-            <div class="col-md-2"></div>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="Available" placeholder="Available">
-            </div>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="Verification" placeholder="Verification">
-            </div>
-            <div class="col-md-2"></div>
+          <div class="form-group col-md-4">
+            <select class="form-control" id="category">
+              <option>Select Category..</option>
+              <option>Oxygen</option>
+              <option>Plasma</option>
+              <option>Blood</option>
+              <option>Hospital</option>
+            </select>
           </div>
-
-          <div class="form-row mt-3 ml-3  mr-3">
-            <div class="col-md-2"></div>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="Comments" placeholder="Comments">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="TRtime" placeholder="Tentative Refilling Time">
-              </div>
-            
-            <div class="col-md-2"></div>
-          </div>
+          <div class="col-md-2"></div>
+        </div>
     </div>
-
     <div class="spacer"></div>
-
-   <div class="dataSubmit text-center">
+    <div class="dataSubmit text-center">
         <button  type="button"class="btn btn-success" >Enter Data to Database</button>
     </div>

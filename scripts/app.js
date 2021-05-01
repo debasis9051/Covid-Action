@@ -12,33 +12,10 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-
-//   var studentsDB= firebase.database().ref(`Oxygen/Vendors`);
-//   studentsDB.child(Date.now()).set({
-//       HospitalName: "Medica",
-//       ContactName: "Hritwick",
-//       Contact: 6289608042,
-//       Address: "ruby",
-//       Rate: 900,
-//       Type: "can refill",
-//       Available: "yes",
-//       TRtime: "31/04/21",
-//       Verification: "Yes 31/04/21 @3pm",
-//       Comments: "Visit directly incase they don't pick up call"
-//     })
-
-// Oxygen
-// 0: green
-// 1: red
-// 2: yellow
-// 3: orange
-// 4: default
-
     let pt = firebase.database().ref(`Oxygen`).get(`Vendors`)
     let vendorsDB
     pt.then((value)=>{value.forEach((values)=>{
         vendorsDB=values.val()
-        // console.log(vendorsDB)
         let tb=``
         let mapArr = {0: "table-success",1: "table-danger",2: "table-yellow",3: "table-warning",4: ""}
         for(let i=0;i<Object.keys(vendorsDB).length;i++)

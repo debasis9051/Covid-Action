@@ -1,0 +1,8 @@
+Todo List:
+1. checkinputs function
+2. fetch and display in app.js
+3. adding Verify and Call button
+4. verification modal
+5. call button function
+6. verification and comments interaction
+7. Making Import program for excel database sheet
