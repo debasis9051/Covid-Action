@@ -18,7 +18,7 @@ document.querySelector(".dataSubmit").addEventListener("click",()=>{
     let description=document.querySelector("#Description").value
     let address=document.querySelector("#Address").value
     let verification=document.querySelector("#Verification").value
-    let category=document.querySelector("#category").value
+    let category=document.querySelector("#Category").value
     
     if(checkInputs(hospital,contact,description,address,verification,category))
     {

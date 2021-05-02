@@ -61,6 +61,17 @@
 
     </div>
 
+    <div class="filter">
+      <label for="filterCategory"></label>
+      <select class="" id="filterCategory">
+        <option>Select Category for Filter..</option>
+        <option>Name of the Organization/Dealer</option>
+        <option>Address/Area</option>
+      </select>
+      <input type="text" id="filterText">
+      <button class="btn btn-info" onclick="filterData(document.getElementById('filterCategory').value,document.getElementById('filterText').value)">Filter</button>
+    </div>
+
     <div class="modal" id="myModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -83,6 +94,7 @@
     <table class="table table-hover">
       <thead>
         <tr>
+          <th scope="col">Sl. No.</th>
           <th scope="col">Name of the Organization/Dealer</th>
           <th scope="col">Contact number of Organization/Dealer</th>
           <th scope="col">Address/Area</th>
@@ -98,23 +110,6 @@
       </tbody>
     </table>
   </div>
-
- <!-- <div class="studentData">  
-   student profiles
-    <div class="student-profile border-light visiblity text-center font-weight-bold" id="orginal">
-        <div class="student  bg-secondary " width="150vw" height="150vw">
-          <div class="student-details">
-            <p class="fullname">Name of the organization</p>
-            <p class="stream">Contact</p>
-            <p class="year">Address</p>
-            <p class="company">Verification</p>
-            <p class="package">Status</p>
-          </div>
-            <a class=" btn-danger btn  btn-lg d-flex justify-content-center  delete" href="#" role="button">Delete</a>
-            <a class=" btn-warning btn  btn-lg d-flex justify-content-center  edit" href="#" role="button">Edit</a>
-        </div>
-    </div>
-</div>  -->
 
 </body>
 </html>

@@ -30,6 +30,7 @@ var firebaseConfig = {
             let currentData = vendorsDB[Object.keys(vendorsDB)[i]];
             // console.log(currentData)
             let tr= `<tr>
+                        <td>${i+1}</td>
                         <td>${currentData.Organization}</td>
                         <td>${currentData.Contact}</td>
                         <td>${currentData.Address}</td>
@@ -92,6 +93,41 @@ var firebaseConfig = {
     temp.remove();
   }
 
-  displayData("Hospital");
+  function filterData(filterCategory,filterText)
+  {
+    if(filterCategory!="Select Category for Filter..")
+    {
+        let tb=""
+        for(let i=0,j=1;i<Object.keys(vendorsDB).length;i++)
+        {
+            let currentData = vendorsDB[Object.keys(vendorsDB)[i]];
+            // console.log(currentData)
+            let mapArr = {"Name of the Organization/Dealer" : currentData.Organization.toLowerCase() ,"Address/Area" : currentData.Address.toLowerCase()}
+
+            if(mapArr[filterCategory].search(filterText.toLowerCase()) != -1)
+            {
+                let tr= `<tr>
+                            <td>${j}</td>
+                            <td>${currentData.Organization}</td>
+                            <td>${currentData.Contact}</td>
+                            <td>${currentData.Address}</td>
+                            <td>${currentData.Verification.replace("T"," @")}</td>
+                            <td>${currentData.Description}</td>
+                            <td>${currentData.Status}</td>
+                            <td>${currentData.Counter}</td>
+                            <td class="flex1">
+                                <button class="btn btn-success verifyLead" onclick="leadVerification(${Object.keys(vendorsDB)[i]})">Verify our Lead</button>
+                                <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
+                            </td>
+                        </tr>`
+                tb+=tr
+                j++
+            }
+        }
+        document.getElementById("tableBody").innerHTML = tb
+    }
+  }
+
+  displayData("Oxygen")
 
 
