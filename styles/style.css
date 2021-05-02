@@ -61,6 +61,9 @@
         position:absolute;
         top : 20vh;
     }
+    .student-profile{
+        margin : 10px 8vw 10px 8vw
+    }
  
    }
 
@@ -81,4 +84,8 @@
    #myModal {
     position:absolute;
     top : 25vh;
+}
+
+.student-profile{
+    margin : 10px 25vw 10px 25vw
 }

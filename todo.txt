@@ -1,4 +1,127 @@
-Todo List:
-1. Making Import program for excel database sheet
-2. 
-3.
+1. priority to last verified data first (sorting system default)
+2. filtering system for user end 
+3. first page on opening -> large buttons for categories (1.hospital 2.oxy 3. bllod 4. plasma )
+4. nav items to be brought to body in mobile version 
+5. google sheet data to firebase  
+
+https://docs.google.com/spreadsheets/d/12v7ehfw3i7Xv-SC5gxOiMf5LLVNr8K9YAeI9h90xtjI/edit?ts=608d07dd#gid=2071851540
+
+  
+
+
+Working
+Not Working
+Not Working
+Not Working
+Not Working
+
+Not Working
+Not Working
+Not Working
+Not Working
+Working
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Working
+Not Working
+
+Working
+Not Working
+Not Working
+
+
+
+Working
+Working
+Working
+Not Working
+
+Working
+Not Working
+Not Working
+
+
+
+
+
+
+
+Not Working
+Not Working
+Working
+Not Working
+Not Working
+Working
+Working
+Working
+Working
+Working
+Not Working
+Not Working
+Not Working
+Working
+Working
+Working
+Not Working
+Not Working
+Working
+Working
+Working
+Working
+Working
+Working
+Working
+Working
+Working
+Not Working
+Working
+Working
+Working
+Working
+Working
+Working
+Working
+Working
+Not Working
+Not Working
+Not Working
+
+Working
+
+
+Not Working
+Not Working
+Not Working
+Working
+
+Working
+Not Working
+Working
+Working
+Working
+Working
+Not Working
+Working
+Working
+Working
+Working
+Working
+Working
+Working
+Working
+Not Working
+
+
+

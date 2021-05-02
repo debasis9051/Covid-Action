@@ -1,0 +1,68 @@
+{
+  "Hospital" : {
+    "Vendors" : {
+      "1619879584665" : {
+        "Address" : "bbahha",
+        "Contact" : "9163721859",
+        "Counter" : 2,
+        "Description" : "available",
+        "Organization" : "hhh",
+        "Status" : "Working",
+        "Verification" : "2021-05-01T20:03"
+      }
+    }
+  },
+  "Oxygen" : {
+    "Vendors" : {
+      "1619855922026" : {
+        "Address" : "panchyasar ",
+        "Contact" : "1234567890",
+        "Counter" : 10,
+        "Description" : "avialable",
+        "Organization" : "Peerless",
+        "Status" : "Working",
+        "Verification" : "2021-05-01T13:28"
+      },
+      "1619862327260" : {
+        "Address" : "chowhati dwarir road",
+        "Contact" : "09123702821",
+        "Counter" : 2,
+        "Description" : "ferferfe",
+        "Organization" : "Smartart Web",
+        "Status" : "Working",
+        "Verification" : "2021-05-01T15:15"
+      },
+      "1619891890751" : {
+        "Address" : "va",
+        "Contact" : "80075548810",
+        "Counter" : 1,
+        "Description" : "gwy",
+        "Organization" : "ggccc",
+        "Status" : "Working",
+        "Verification" : "2021-05-01T23:28"
+      },
+      "1619891923347" : {
+        "Address" : "Kolkata",
+        "Contact" : "9831021208",
+        "Counter" : 2,
+        "Description" : "Oxygen Supply souurce in and around Kolkata",
+        "Organization" : "Jayshree",
+        "Status" : "Not Working",
+        "Verification" : "2021-05-01T23:28"
+      }
+    }
+  },
+  "Plasma" : {
+    "Vendors" : {
+      "1619893352834" : {
+        "Address" : "malancha bazaar mahinagarh .vivekananda avenje .baruipur .kolkata. post Malancha",
+        "Contact" : "09163721859",
+        "Counter" : 1,
+        "Description" : "aaaaa",
+        "Organization" : "MOUSUMI CABLE NETWORK",
+        "Status" : "Working",
+        "Verification" : "2021-05-13T02:55"
+      }
+    }
+  }
+}

@@ -1,0 +1,1293 @@
+{
+  "Oxygen" : {
+    "Vendors" : {
+      "1619879584665" : {
+        
+        "Address" : "Baghajatin",
+        "Contact" : 8017711721,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T17:30",
+        "id" : 1619879584665
+      },
+      "1619879584666" : {
+        
+        "Address" : "",
+        "Contact" : 8700013641,
+        "Counter" : 1,
+        "Description" : "Switched off",
+        "Organization" : "Hemkunt Foundation",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T12:17",
+        "id" : 1619879584666
+      },
+      "1619879584667" : {
+        
+        "Address" : "",
+        "Contact" : 7980636271,
+        "Counter" : 1,
+        "Description" : "Switched off",
+        "Organization" : "Medish",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T12:19",
+        "id" : 1619879584667
+      },
+      "1619879584668" : {
+        
+        "Address" : "",
+        "Contact" : 9883272704,
+        "Counter" : 1,
+        "Description" : "Doesn't supply",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T12:25",
+        "id" : 1619879584668
+      },
+      "1619879584669" : {
+        
+        "Address" : "",
+        "Contact" : 9836193420,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "Belle Vue Clinic",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T20:3",
+        "id" : 1619879584669
+      },
+      "1619879584670" : {
+        
+        "Address" : "Salt Lake",
+        "Contact" : 3366063800,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "AMRI Hospital",
+        "Status" : "",
+        "Verification" : "2021-04-28T18:22",
+        "id" : 1619879584670
+      },
+      "1619879584671" : {
+        
+        "Address" : "",
+        "Contact" : 7044074009,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "Care Contimumm",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T12:24",
+        "id" : 1619879584671
+      },
+      "1619879584672" : {
+        
+        "Address" : "Gariahat",
+        "Contact" : 9073208104,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T12:58",
+        "id" : 1619879584672
+      },
+      "1619879584673" : {
+        
+        "Address" : "Garia",
+        "Contact" : 7059323029,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "Ujjal Oxygen",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T12:59",
+        "id" : 1619879584673
+      },
+      "1619879584674" : {
+        
+        "Address" : "Behala",
+        "Contact" : 8013985515,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "Maa Medical",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T13:1",
+        "id" : 1619879584674
+      },
+      "1619879584675" : {
+        
+        "Address" : "",
+        "Contact" : 9830023540,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T20:50",
+        "id" : 1619879584675
+      },
+      "1619879584676" : {
+        
+        "Address" : "Mominpore",
+        "Contact" : 9804206701,
+        "Counter" : 1,
+        "Description" : "Switched off",
+        "Organization" : "Perfect Medical Products",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:4",
+        "id" : 1619879584676
+      },
+      "1619879584677" : {
+        
+        "Address" : "426,Jessore Road",
+        "Contact" : 9339790295,
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "Bengal Oxygen",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:5",
+        "id" : 1619879584677
+      },
+      "1619879584678" : {
+        
+        "Address" : "118B, South Sinthee Road",
+        "Contact" : 9007427926,
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "Aryan Oxygen Services",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:6",
+        "id" : 1619879584678
+      },
+      "1619879584679" : {
+        
+        "Address" : "",
+        "Contact" : "98300 62305",
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "Indian Refrigeration Stores",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:7",
+        "id" : 1619879584679
+      },
+      "1619879584680" : {
+        
+        "Address" : "Khardah",
+        "Contact" : 9838788578,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Bengal Gases",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584680
+      },
+      "1619879584681" : {
+        
+        "Address" : "Kamarhati",
+        "Contact" : 3325632488,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Bharat Oxytech pvt ltd",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584681
+      },
+      "1619879584682" : {
+        
+        "Address" : "",
+        "Contact" : "033-2229 1923",
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "Ellenbarrie Industrial Gases",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:8",
+        "id" : 1619879584682
+      },
+      "1619879584683" : {
+        
+        "Address" : "",
+        "Contact" : 9830051503,
+        "Counter" : 1,
+        "Description" : "Invalid",
+        "Organization" : "Echo Trading Co- ",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:10",
+        "id" : 1619879584683
+      },
+      "1619879584684" : {
+        
+        "Address" : "",
+        "Contact" : 9831081491,
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:11",
+        "id" : 1619879584684
+      },
+      "1619879584685" : {
+        
+        "Address" : "",
+        "Contact" : 9831205205,
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:12",
+        "id" : 1619879584685
+      },
+      "1619879584686" : {
+        
+        "Address" : "",
+        "Contact" : 9832038638,
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "Riya Gas Agency",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:13",
+        "id" : 1619879584686
+      },
+      "1619879584687" : {
+        
+        "Address" : "",
+        "Contact" : "96745 08854",
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "KSS Oxygen Service",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:14",
+        "id" : 1619879584687
+      },
+      "1619879584688" : {
+        
+        "Address" : "",
+        "Contact" : "90073 07499",
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:14",
+        "id" : 1619879584688
+      },
+      "1619879584689" : {
+        
+        "Address" : "",
+        "Contact" : "98365 65064",
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "Fyrax India",
+        "Status" : "",
+        "Verification" : "2021-04-26T13:16",
+        "id" : 1619879584689
+      },
+      "1619879584690" : {
+        
+        "Address" : "Garia",
+        "Contact" : 9051653106,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T15:8",
+        "id" : 1619879584690
+      },
+      "1619879584691" : {
+        
+        "Address" : "",
+        "Contact" : "84200 04004",
+        "Counter" : 1,
+        "Description" : "Invalid",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T20:10",
+        "id" : 1619879584691
+      },
+      "1619879584692" : {
+        
+        "Address" : "",
+        "Contact" : 8967865027,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "All over Bengal",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584692
+      },
+      "1619879584693" : {
+        
+        "Address" : "Salt Lake",
+        "Contact" : 9674903883,
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T20:11",
+        "id" : 1619879584693
+      },
+      "1619879584694" : {
+        
+        "Address" : "",
+        "Contact" : 9836237754,
+        "Counter" : 1,
+        "Description" : "Switched Off",
+        "Organization" : "Sil Pharmacy Oxygen Refil",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T14:14",
+        "id" : 1619879584694
+      },
+      "1619879584695" : {
+        
+        "Address" : "Salt Lake",
+        "Contact" : 9830179101,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Team Saath",
+        "Status" : "Not Working",
+        "Verification" : "",
+        "id" : 1619879584695
+      },
+      "1619879584696" : {
+        
+        "Address" : "Tollygunge Phari",
+        "Contact" : 9831919933,
+        "Counter" : 1,
+        "Description" : "Busy",
+        "Organization" : "Oxygen Services",
+        "Status" : "",
+        "Verification" : "2021-04-26T14:16",
+        "id" : 1619879584696
+      },
+      "1619879584697" : {
+        
+        "Address" : "Dum Dum and North Kolkata",
+        "Contact" : 9431119656,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Sparsh Healthcare",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584697
+      },
+      "1619879584698" : {
+        
+        "Address" : "Dum Dum",
+        "Contact" : 7439174645,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584698
+      },
+      "1619879584699" : {
+        
+        "Address" : "Dumdum, Durganagar",
+        "Contact" : 9433782957,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T19:0",
+        "id" : 1619879584699
+      },
+      "1619879584700" : {
+        
+        "Address" : "Near Borokachhari Temple, Dumdum - canisters available.",
+        "Contact" : 9830680887,
+        "Counter" : 1,
+        "Description" : "Visit directly incase they don't pick up call",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T11:37",
+        "id" : 1619879584700
+      },
+      "1619879584701" : {
+        
+        "Address" : "Dum Dum",
+        "Contact" : 9007915501,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T9:40",
+        "id" : 1619879584701
+      },
+      "1619879584702" : {
+        
+        "Address" : "Dumdum",
+        "Contact" : 9804230307,
+        "Counter" : 1,
+        "Description" : "Doesn't Supply",
+        "Organization" : "​Riddhi-Siddhi Pharmacy",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T14:19",
+        "id" : 1619879584702
+      },
+      "1619879584703" : {
+        
+        "Address" : "Barrackpore",
+        "Contact" : 8910645508,
+        "Counter" : 1,
+        "Description" : "Switched off",
+        "Organization" : "​BK Pharma",
+        "Status" : "",
+        "Verification" : "2021-04-26T14:21",
+        "id" : 1619879584703
+      },
+      "1619879584704" : {
+        
+        "Address" : "Talpukur, Barrackpore",
+        "Contact" : 9331004610,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T20:39",
+        "id" : 1619879584704
+      },
+      "1619879584705" : {
+        
+        "Address" : "Konnagar",
+        "Contact" : 8961186149,
+        "Counter" : 1,
+        "Description" : "Out of stock",
+        "Organization" : "​Nahar Medico",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T20:45",
+        "id" : 1619879584705
+      },
+      "1619879584706" : {
+        
+        "Address" : "Dankuni",
+        "Contact" : 9903374257,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "Medicare ",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T20:54",
+        "id" : 1619879584706
+      },
+      "1619879584707" : {
+        
+        "Address" : "Dankuni",
+        "Contact" : 9804037559,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Medicare",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584707
+      },
+      "1619879584708" : {
+        
+        "Address" : "Kundughat, Hooghly",
+        "Contact" : 9748428821,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Niramoy Medicine",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584708
+      },
+      "1619879584709" : {
+        
+        "Address" : "Kundughat, Hooghly",
+        "Contact" : 8420083427,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Niramoy Medicine",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584709
+      },
+      "1619879584710" : {
+        
+        "Address" : "Uttarpara",
+        "Contact" : 7947359645,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "​PharmaCo",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584710
+      },
+      "1619879584711" : {
+        
+        "Address" : "Sahaganj",
+        "Contact" : 9432257213,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Shome Pharmacy",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584711
+      },
+      "1619879584712" : {
+        
+        "Address" : "Serampore",
+        "Contact" : 9038840685,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Agarwal Medical",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584712
+      },
+      "1619879584713" : {
+        
+        "Address" : "Serampore",
+        "Contact" : 9804006628,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Agarwal Medical",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584713
+      },
+      "1619879584714" : {
+        
+        "Address" : "Kalyani",
+        "Contact" : 8583949244,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T20:52",
+        "id" : 1619879584714
+      },
+      "1619879584715" : {
+        
+        "Address" : "",
+        "Contact" : 7890066630,
+        "Counter" : 1,
+        "Description" : "Switched off",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T20:51",
+        "id" : 1619879584715
+      },
+      "1619879584716" : {
+        
+        "Address" : "Baghajatin",
+        "Contact" : 9064464248,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Oxygen Baghajatin",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T9:50",
+        "id" : 1619879584716
+      },
+      "1619879584717" : {
+        
+        "Address" : "",
+        "Contact" : 9330800161,
+        "Counter" : 1,
+        "Description" : "Switched off",
+        "Organization" : " Maity Enterprise ",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T20:48",
+        "id" : 1619879584717
+      },
+      "1619879584718" : {
+        
+        "Address" : "",
+        "Contact" : 9836485818,
+        "Counter" : 1,
+        "Description" : "Out of stock",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T20:47",
+        "id" : 1619879584718
+      },
+      "1619879584719" : {
+        
+        "Address" : "South Kolkata",
+        "Contact" : "9143480005/6/8",
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Oxyline Services",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T20:6",
+        "id" : 1619879584719
+      },
+      "1619879584720" : {
+        
+        "Address" : "Baguihati",
+        "Contact" : 8420614424,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Maa Tara Life Care",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T20:20",
+        "id" : 1619879584720
+      },
+      "1619879584721" : {
+        
+        "Address" : "Kolkata",
+        "Contact" : 8777688936,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T20:32",
+        "id" : 1619879584721
+      },
+      "1619879584722" : {
+        
+        "Address" : "Jadavpur",
+        "Contact" : 9874843794,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T20:56",
+        "id" : 1619879584722
+      },
+      "1619879584723" : {
+        
+        "Address" : "Howrah",
+        "Contact" : 9007024466,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T19:0",
+        "id" : 1619879584723
+      },
+      "1619879584724" : {
+        
+        "Address" : "Jadavpur",
+        "Contact" : 9475218866,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T12:38",
+        "id" : 1619879584724
+      },
+      "1619879584725" : {
+        
+        "Address" : "Jadavpur",
+        "Contact" : 8910898725,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T12:20",
+        "id" : 1619879584725
+      },
+      "1619879584726" : {
+        
+        "Address" : "Jadavpur Area",
+        "Contact" : 9830048199,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T12:21",
+        "id" : 1619879584726
+      },
+      "1619879584727" : {
+        
+        "Address" : "Garia",
+        "Contact" : 9330931322,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T12:53",
+        "id" : 1619879584727
+      },
+      "1619879584728" : {
+        
+        "Address" : "Garia",
+        "Contact" : 7059484445,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T12:58",
+        "id" : 1619879584728
+      },
+      "1619879584729" : {
+        
+        "Address" : "Garia",
+        "Contact" : 9330931322,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T1:7",
+        "id" : 1619879584729
+      },
+      "1619879584730" : {
+        
+        "Address" : "Dumdum",
+        "Contact" : 8420906633,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T22:12",
+        "id" : 1619879584730
+      },
+      "1619879584731" : {
+        
+        "Address" : "Dumdum",
+        "Contact" : 7439174645,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T22:12",
+        "id" : 1619879584731
+      },
+      "1619879584732" : {
+        
+        "Address" : "New Town",
+        "Contact" : 9836888976,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Subrata Oxygen Center",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T12:37",
+        "id" : 1619879584732
+      },
+      "1619879584733" : {
+        
+        "Address" : "Baruipur",
+        "Contact" : 9831919933,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T12:39",
+        "id" : 1619879584733
+      },
+      "1619879584734" : {
+        
+        "Address" : "Serampore",
+        "Contact" : 9331769575,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T19:0",
+        "id" : 1619879584734
+      },
+      "1619879584735" : {
+        
+        "Address" : "Chandannagar",
+        "Contact" : 9433542169,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T19:0",
+        "id" : 1619879584735
+      },
+      "1619879584736" : {
+        
+        "Address" : "Only Howrah",
+        "Contact" : "9163302536 / 7001869442",
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T21:14",
+        "id" : 1619879584736
+      },
+      "1619879584737" : {
+        
+        "Address" : "Kolkata",
+        "Contact" : 9333720810,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T1:7",
+        "id" : 1619879584737
+      },
+      "1619879584738" : {
+        
+        "Address" : "Nagerbajar",
+        "Contact" : 9903971566,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T22:30",
+        "id" : 1619879584738
+      },
+      "1619879584739" : {
+        
+        "Address" : "Tollygunge",
+        "Contact" : 9861810557,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T19:10",
+        "id" : 1619879584739
+      },
+      "1619879584740" : {
+        
+        "Address" : "Baranagar, Sodepur",
+        "Contact" : 9875651216,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T19:39",
+        "id" : 1619879584740
+      },
+      "1619879584741" : {
+        
+        "Address" : "Behala, Thakurpukur, Joka, Tollygunje, Jadavpur",
+        "Contact" : 6290985137,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T16:27",
+        "id" : 1619879584741
+      },
+      "1619879584742" : {
+        
+        "Address" : "Park Circus",
+        "Contact" : 9836237754,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Sil Pharmacy, Park Circus",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T11:48",
+        "id" : 1619879584742
+      },
+      "1619879584743" : {
+        
+        "Address" : "Baghajatin",
+        "Contact" : 9064464248,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T11:49",
+        "id" : 1619879584743
+      },
+      "1619879584744" : {
+        
+        "Address" : "Kolkata",
+        "Contact" : 9674903883,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T11:50",
+        "id" : 1619879584744
+      },
+      "1619879584745" : {
+        
+        "Address" : "Kasba",
+        "Contact" : 8337088759,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T19:0",
+        "id" : 1619879584745
+      },
+      "1619879584746" : {
+        
+        "Address" : "Tollygunje and Khidderpore",
+        "Contact" : 9831919933,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T15:40",
+        "id" : 1619879584746
+      },
+      "1619879584747" : {
+        
+        "Address" : "Baghajatin Kolkata",
+        "Contact" : "09830083350",
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Prabal Chowdhury",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T12:59",
+        "id" : 1619879584747
+      },
+      "1619879584748" : {
+        
+        "Address" : "Garia",
+        "Contact" : 9831143338,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Dip",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T13:13",
+        "id" : 1619879584748
+      },
+      "1619879584749" : {
+        
+        "Address" : "Behala, Shakuntala park",
+        "Contact" : 9830237206,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T19:0",
+        "id" : 1619879584749
+      },
+      "1619879584750" : {
+        
+        "Address" : "",
+        "Contact" : 8240358572,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T22:4",
+        "id" : 1619879584750
+      },
+      "1619879584751" : {
+        
+        "Address" : "VIP Road",
+        "Contact" : 9681201066,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T16:28",
+        "id" : 1619879584751
+      },
+      "1619879584752" : {
+        
+        "Address" : "Parkstreet Mullickbazar",
+        "Contact" : 9123816785,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T16:14",
+        "id" : 1619879584752
+      },
+      "1619879584753" : {
+        
+        "Address" : "Beliaghata",
+        "Contact" : 9830560234,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Hindustan Gases",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584753
+      },
+      "1619879584754" : {
+        
+        "Address" : "",
+        "Contact" : 9674903883,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T23:50",
+        "id" : 1619879584754
+      },
+      "1619879584755" : {
+        
+        "Address" : "",
+        "Contact" : 9830056776,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Unosupply",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584755
+      },
+      "1619879584756" : {
+        
+        "Address" : "",
+        "Contact" : 9434051222,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Shankar Gas, GS Agarwal (Kolkata)",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584756
+      },
+      "1619879584757" : {
+        
+        "Address" : "",
+        "Contact" : 9051832211,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Jamaat e Islame Hind",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T3:33",
+        "id" : 1619879584757
+      },
+      "1619879584758" : {
+        
+        "Address" : "",
+        "Contact" : 9831272902,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Jamaat e Islame Hind",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T3:33",
+        "id" : 1619879584758
+      },
+      "1619879584759" : {
+        
+        "Address" : "",
+        "Contact" : 9002534659,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Jamaat e Islame Hind",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-27T3:33",
+        "id" : 1619879584759
+      },
+      "1619879584760" : {
+        
+        "Address" : "",
+        "Contact" : 9038643178,
+        "Counter" : 1,
+        "Description" : "Need to inform in advance",
+        "Organization" : "OXY99",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T20:12",
+        "id" : 1619879584760
+      },
+      "1619879584761" : {
+        
+        "Address" : "",
+        "Contact" : 9830144966,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "NLS & STUDIO EYE",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584761
+      },
+      "1619879584762" : {
+        
+        "Address" : "Kasba",
+        "Contact" : 9874843794,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Niladri oxygen",
+        "Status" : "Working",
+        "Verification" : "2021-04-26T15:37",
+        "id" : 1619879584762
+      },
+      "1619879584763" : {
+        
+        "Address" : "Tollygunge",
+        "Contact" : 8967280434,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Kuntal",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-26T16:19",
+        "id" : 1619879584763
+      },
+      "1619879584764" : {
+        
+        "Address" : "Sealdah Entally",
+        "Contact" : 9089085252,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T1:35",
+        "id" : 1619879584764
+      },
+      "1619879584765" : {
+        
+        "Address" : "Dum Dum Cantonment",
+        "Contact" : 7003656667,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Renuka Enterprises",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T11:35",
+        "id" : 1619879584765
+      },
+      "1619879584766" : {
+        
+        "Address" : "Howrah & Baghajatin",
+        "Contact" : 9748683892,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T12:30",
+        "id" : 1619879584766
+      },
+      "1619879584767" : {
+        
+        "Address" : "Krishnanagar",
+        "Contact" : 7797754930,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Bengal Trading Company",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T19:45",
+        "id" : 1619879584767
+      },
+      "1619879584768" : {
+        
+        "Address" : "Shyamnagar",
+        "Contact" : 6290490078,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "Shyamnagar Oxygen",
+        "Status" : "Not Working",
+        "Verification" : "",
+        "id" : 1619879584768
+      },
+      "1619879584769" : {
+        
+        "Address" : "Baghajatin",
+        "Contact" : 8017711721,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T11:10",
+        "id" : 1619879584769
+      },
+      "1619879584770" : {
+        
+        "Address" : "Chouboti",
+        "Contact" : 9932230205,
+        "Counter" : 1,
+        "Description" : "Prescription Required for O2",
+        "Organization" : "Lion Eyesite Hospital",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T11:0",
+        "id" : 1619879584770
+      },
+      "1619879584771" : {
+        
+        "Address" : "Behala, Joka, New Alipore",
+        "Contact" : "",
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-27T14:15",
+        "id" : 1619879584771
+      },
+      "1619879584772" : {
+        
+        "Address" : "Gariahat Road",
+        "Contact" : 9903630971,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T11:40",
+        "id" : 1619879584772
+      },
+      "1619879584773" : {
+        
+        "Address" : "Baghajatin",
+        "Contact" : 9830083350,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T10:0",
+        "id" : 1619879584773
+      },
+      "1619879584774" : {
+        
+        "Address" : "Barasat",
+        "Contact" : 9883272794,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T9:48",
+        "id" : 1619879584774
+      },
+      "1619879584775" : {
+        
+        "Address" : "Medinipore",
+        "Contact" : 9734534943,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T11:30",
+        "id" : 1619879584775
+      },
+      "1619879584776" : {
+        
+        "Address" : "Murshidabad",
+        "Contact" : 9434364512,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "Working",
+        "Verification" : "2021-04-28T11:30",
+        "id" : 1619879584776
+      },
+      "1619879584777" : {
+        
+        "Address" : "",
+        "Contact" : 9007882261,
+        "Counter" : 1,
+        "Description" : "Did not pick up",
+        "Organization" : "",
+        "Status" : "Not Working",
+        "Verification" : "2021-04-28T14:12",
+        "id" : 1619879584777
+      },
+      "1619879584778" : {
+        
+        "Address" : "",
+        "Contact" : 9831523226,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584778
+      },
+      "1619879584779" : {
+        
+        "Address" : "",
+        "Contact" : 8617224256,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584779
+      },
+      "1619879584780" : {
+        
+        "Address" : "",
+        "Contact" : 8017095302,
+        "Counter" : 1,
+        "Description" : "",
+        "Organization" : "",
+        "Status" : "",
+        "Verification" : "",
+        "id" : 1619879584780
+      },
+      "1619879584781" : {
+        
+        "Address" : "",
+        "Contact" : 9163466235,
+        "Counter" : 1,
+        "Description" : "Number cannot be traced or reached",
+        "Organization" : "Paul Medical Corner",
+        "Status" : "",
+        "Verification" : "2021-04-28T18:20",
+        "id" : 1619879584781
+      }
+    }
+  }
+}
