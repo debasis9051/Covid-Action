@@ -11,11 +11,18 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-  startApp()
+  
   let cate
   let vendorsDB
+  let currentTableBody
   function displayData(category)
   {
+    document.querySelector("#hospitalCategory").classList.remove("highlighter")
+    document.querySelector("#oxygenCategory").classList.remove("highlighter")
+    document.querySelector("#bloodCategory").classList.remove("highlighter")
+    document.querySelector("#plasmaCategory").classList.remove("highlighter")
+    document.querySelector(`#${category.toLowerCase()}Category`).classList.add("highlighter")
+
     cate = category
     firebase.database().ref(category).once("value").then((snapshot)=>{
         if(!snapshot.exists())
@@ -24,6 +31,7 @@ var firebaseConfig = {
     let pt = firebase.database().ref(category).get(`Vendors`)
     pt.then((value)=>{value.forEach((values)=>{
         vendorsDB=values.val()
+        currentTableBody = vendorsDB
         let tb=""
         for(let i=0;i<Object.keys(vendorsDB).length;i++)
         {
@@ -47,6 +55,9 @@ var firebaseConfig = {
         }
         document.getElementById("tableBody").innerHTML = tb
     })})
+    document.querySelector(".filter").classList.remove("d-none")
+    document.querySelector(".table-responsive").classList.remove("d-none")
+    
   }
 
   function leadVerification(key)
@@ -78,6 +89,10 @@ var firebaseConfig = {
     }
     temp["Counter"] = vendorsDB[key].Counter + 1
 
+    let now = new Date()
+    let dateStringWithTime = now.getFullYear()+"-"+now.getMonth()+"-"+now.getDate()+"T"+now.getHours()+":"+now.getMinutes()
+    temp["Verification"] = dateStringWithTime 
+
     let p = ref.update(temp)
     p.then(()=>location.reload())
     p.catch(()=>console.log("Error uploading from modal"))
@@ -94,67 +109,94 @@ var firebaseConfig = {
 
   function filterData(filterCategory,filterText)
   {
+    document.querySelector("#exitFilter").classList.remove("d-none")
+
     if(filterCategory!="Select Category for Filter..")
     {
         let tb=""
-        for(let i=0,j=1;i<Object.keys(vendorsDB).length;i++)
+        for(let i=0,j=1;i<Object.keys(currentTableBody).length;i++)
         {
-            let currentData = vendorsDB[Object.keys(vendorsDB)[i]];
-            // console.log(currentData)
-            let mapArr = {"Name of the Organization/Dealer" : currentData.Organization.toLowerCase() ,"Address/Area" : currentData.Address.toLowerCase()}
+            let currentKey = Object.keys(currentTableBody)[i]
+            let currentData = currentTableBody[currentKey];
+            let mapArr = {"Name of the Organization/Dealer" : currentData.Organization.toLowerCase() ,"Address/Area" : currentData.Address.toLowerCase() ,"Status" : currentData.Status.toLowerCase()}
 
-            if(mapArr[filterCategory].search(filterText.toLowerCase()) != -1)
+            if(filterCategory=="Status")
             {
-                let tr= `<tr>
-                            <td>${j}</td>
-                            <td>${currentData.Organization}</td>
-                            <td>${currentData.Contact}</td>
-                            <td>${currentData.Address}</td>
-                            <td>${currentData.Verification.replace("T"," @")}</td>
-                            <td>${currentData.Description}</td>
-                            <td>${currentData.Status}</td>
-                            <td>${currentData.Counter}</td>
-                            <td class="flex1">
-                                <button class="btn btn-success verifyLead" onclick="leadVerification(${Object.keys(vendorsDB)[i]})">Verify our Lead</button>
-                                <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
-                            </td>
-                        </tr>`
-                tb+=tr
-                j++
+              if(mapArr[filterCategory] === filterText.toLowerCase())
+              {
+                  let tr= `<tr>
+                              <td>${j}</td>
+                              <td>${currentData.Organization}</td>
+                              <td>${currentData.Contact}</td>
+                              <td>${currentData.Address}</td>
+                              <td>${currentData.Verification.replace("T"," @")}</td>
+                              <td>${currentData.Description}</td>
+                              <td>${currentData.Status}</td>
+                              <td>${currentData.Counter}</td>
+                              <td class="flex1">
+                                  <button class="btn btn-success verifyLead" onclick="leadVerification(${currentKey})">Verify our Lead</button>
+                                  <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
+                              </td>
+                          </tr>`
+                  tb+=tr
+                  j++
+              }
+              else
+              {
+                delete currentTableBody.currentKey
+              }
             }
+            else
+            {
+              if(mapArr[filterCategory].search(filterText.toLowerCase()) != -1)
+              {
+                  let tr= `<tr>
+                              <td>${j}</td>
+                              <td>${currentData.Organization}</td>
+                              <td>${currentData.Contact}</td>
+                              <td>${currentData.Address}</td>
+                              <td>${currentData.Verification.replace("T"," @")}</td>
+                              <td>${currentData.Description}</td>
+                              <td>${currentData.Status}</td>
+                              <td>${currentData.Counter}</td>
+                              <td class="flex1">
+                                  <button class="btn btn-success verifyLead" onclick="leadVerification(${currentKey})">Verify our Lead</button>
+                                  <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
+                              </td>
+                          </tr>`
+                  tb+=tr
+                  j++
+              }
+              else
+              {
+                delete currentTableBody.currentKey
+              }
+            }
+            
         }
         document.getElementById("tableBody").innerHTML = tb
     }
   }
 
-  function startApp()
+  function filterClose()
   {
-    $("#myModal").modal('show')
-    document.querySelector(".close").remove();
-    document.querySelector("#myModal").classList.add("big12")
-    document.querySelector(".modal-content").classList.add("big")
-    document.querySelector(".modal-title").innerHTML = `Select Leads Category`
-    document.querySelector(".modal-body").innerHTML = `
-    <div class="text-center" id="categoriesModal">
-      <button class="btn btn-success" onclick="displayData('Hospital');temp();">Hospital</button>
-      <button class="btn btn-info" onclick="displayData('Oxygen');temp();">Oxygen</button>
-      <button class="btn btn-danger" onclick="displayData('Blood');temp();">Blood</button>
-      <button class="btn btn-warning" onclick="displayData('Plasma');temp();">Plasma</button>
-      
-      
-      <!-- <a class="btn btn-success " href="/index.html">Ambulance</a>
-      <a class="btn btn-warning " href="/index.html">Covid Test</a>
-      <a class="btn btn-secondary  " href="/index.html">Food Service</a> -->
+    let temp2
+    if(document.querySelector("#hospitalCategory").classList.contains("highlighter"))
+      temp2="Hospital"
+    else if(document.querySelector("#oxygenCategory").classList.contains("highlighter"))
+      temp2="Oxygen"
+    else if(document.querySelector("#bloodCategory").classList.contains("highlighter"))
+      temp2="Blood"
+    else if(document.querySelector("#plasmaCategory").classList.contains("highlighter"))
+      temp2="Plasma"
+    else
+      console.log("Error in filterClose")
 
-    </div>`
-
-    // document.querySelector(".categories").addEventListener("click" , ()=>{
-    //     $("#myModal").modal('hide')
-    // })
- 
-
+    displayData(temp2)
+    document.querySelector("#exitFilter").classList.add("d-none")
   }
 
+  
   function temp()
   {
     $("#myModal").modal('hide')

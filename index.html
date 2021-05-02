@@ -29,18 +29,15 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary font-weight-bold text-white bg-dark text-uppercase ">
-        <a class="navbar-brand" href="/index.html">Covi-Bangla</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="collapse navbar-collapse " id="menu">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary font-weight-bold text-white bg-dark text-uppercase navCus ">
+      <a class="navbar-brand" href="/index.html">Covi-Bangla</a>
+      <div id="menu">
         <ul class="navbar-nav mr-auto ">
           <li class="nav-item active">
             <a class="nav-link" href="/index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/giveLeads.html">Give Leads</a>
+            <a class="nav-link btn btn-warning " style="color:black; font-weight:bold;"href="/giveLeads.html">Give Us Leads</a>
           </li>
         </ul>
       </div>   
@@ -48,11 +45,15 @@
 
     <div class="spacer"></div>
 
+    <div class="quote text-center">
+      <h4>Choose leads from:</h4>
+    </div>
+
     <div class="text-center" id="categories">
-      <button class="btn btn-success" onclick="displayData('Hospital')">Hospital</button>
-      <button class="btn btn-info" onclick="displayData('Oxygen')">Oxygen</button>
-      <button class="btn btn-danger" onclick="displayData('Blood')">Blood</button>
-      <button class="btn btn-warning" onclick="displayData('Plasma')">Plasma</button>
+      <button class="btn btn-success" id="hospitalCategory"  aria-pressed="false" onclick="displayData('Hospital')">Hospital</button>
+      <button class="btn btn-info" id="oxygenCategory" onclick="displayData('Oxygen')">Oxygen</button>
+      <button class="btn btn-danger" id="bloodCategory" onclick="displayData('Blood')">Blood</button>
+      <button class="btn btn-warning" id="plasmaCategory" onclick="displayData('Plasma')">Plasma</button>
       
       
       <!-- <a class="btn btn-success " href="/index.html">Ambulance</a>
@@ -61,15 +62,17 @@
 
     </div>
 
-    <div class="filter">
-      <label for="filterCategory"></label>
+    <div class="filter d-none ">
       <select class="" id="filterCategory">
         <option>Select Category for Filter..</option>
         <option>Name of the Organization/Dealer</option>
         <option>Address/Area</option>
+        <option>Status</option>
       </select>
+      <label for="filterText">Search Filter Text</label>
       <input type="text" id="filterText">
       <button class="btn btn-info" onclick="filterData(document.getElementById('filterCategory').value,document.getElementById('filterText').value)">Filter</button>
+      <button id="exitFilter" class="btn btn-danger d-none" onclick="filterClose()">&times;</button>
     </div>
 
     <div class="modal" id="myModal">
@@ -90,7 +93,8 @@
     </div>
 
     <div class="spacer"></div>
-    <div class="table-responsive">
+
+    <div class="table-responsive d-none">
     <table class="table table-hover">
       <thead>
         <tr>
@@ -98,7 +102,7 @@
           <th scope="col">Name of the Organization/Dealer</th>
           <th scope="col">Contact number of Organization/Dealer</th>
           <th scope="col">Address/Area</th>
-          <th scope="col">Verification</th>
+          <th scope="col">Latest Verification</th>
           <th scope="col">Description</th>
           <th scope="col">Status</th>
           <th scope="col">No. of times Verified</th>

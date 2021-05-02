@@ -1,7 +1,5 @@
-1. priority to last verified data first (sorting system default)
-3. first page on opening -> large buttons for categories  for mobile view
-4. nav items to be brought to body in mobile version 
-5.Highlight current category
-https://docs.google.com/spreadsheets/d/12v7ehfw3i7Xv-SC5gxOiMf5LLVNr8K9YAeI9h90xtjI/edit?ts=608d07dd#gid=2071851540
-
-  
+1. Sorting system (default: Last Verification)
+3. CSS for filter
+4. css for verification modal(textarea resize)
+5. css for verification modal(responsive)
+4. import final.json for oxygen

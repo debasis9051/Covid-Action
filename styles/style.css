@@ -9,7 +9,9 @@
     /* overflow : hidden */
 }
 #categories button{
+    font-size: larger;
     margin: 10px;
+    color: black;
 }
 .table-yellow{
     background-color: rgb(151, 151, 58);
@@ -37,15 +39,13 @@
 .flex1 a {
     margin: 5px;
 }
+
+
    html,body, body:before, body:after{
      padding: 0;
      margin: 0;
      overflow-x: hidden; 
    }
-
-  
-
-
 
    @media only screen and (max-width: 440px)
    {
@@ -66,29 +66,28 @@
     }
  
     .big
-{
-    height : 25rem !important;
-    width : 22rem !important;
+    {
+        height : 25rem !important;
+        width : 22rem !important;
+    }
+    .big12
+    { 
+        top : 0px !important;
+        left : 15px !important;
+    }   
+    #categoriesModal
+    {
+        /* display: none ; */
+        /* width :100%;
+        height : 100%; */
+        display:flex;
+        flex-direction : column !important;
+        justify-content : space-between;
+    }
+    #categoriesModal button{
+        font-size :x-large !important;
+    }
 }
-.big12
-{ 
-    top : 0px !important;
-    left : 15px !important;
-
-}
-#categoriesModal{
-    /* display: none ; */
-    /* width :100%;
-    height : 100%; */
-    display:flex;
-    flex-direction : column !important;
-    justify-content : space-between;
-}
-#categoriesModal button{
-    font-size :x-large !important;
-}
-   }
-
 
    .modal-footer{
        display: flex;
@@ -104,19 +103,15 @@
    }
 
    #myModal {
-    position:absolute;
-    top : 25vh;
-}
+        position:absolute;
+        top : 25vh;
+   }
 
 .student-profile{
     margin : 10px 25vw 10px 25vw
 }
 
-.big
-{
-    height : 35rem;
-    width : 45rem;
-}
+
 
 #categoriesModal{
     width :100%;
@@ -131,7 +126,13 @@
     font-size :xxx-large;
 }
 
-.big12{ 
+.big
+{
+    height : 35rem;
+    width : 45rem;
+}
+.big12
+{ 
     top : 0px !important;
     left : -130px;
 
@@ -149,5 +150,16 @@
         left : 5px;
     
     }
+    .navCus{
+       justify-content: space-between !important; 
+    }
 
 }
+
+.highlighter:focus{
+    box-shadow: 0px 0px 20px #ffffff;
+}
+.highlighter{
+    box-shadow: 0px 0px 20px #ffffff;
+}
+
