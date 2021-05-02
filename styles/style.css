@@ -89,3 +89,22 @@
 .student-profile{
     margin : 10px 25vw 10px 25vw
 }
+
+.big
+{
+    height : 35rem;
+    width : 45rem;
+}
+
+#categoriesModal{
+    width :100%;
+    height : 100%;
+    display:flex;
+    flex-direction : column;
+    justify-content : space-between;
+}
+
+
+#categoriesModal button{
+    font-size :xxx-large;
+}

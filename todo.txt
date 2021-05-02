@@ -1,10 +1,7 @@
 1. priority to last verified data first (sorting system default)
-2. filtering system for user end 
-3. first page on opening -> large buttons for categories (1.hospital 2.oxy 3. bllod 4. plasma )
+3. first page on opening -> large buttons for categories  for mobile view
 4. nav items to be brought to body in mobile version 
-
+5.Highlight current category
 https://docs.google.com/spreadsheets/d/12v7ehfw3i7Xv-SC5gxOiMf5LLVNr8K9YAeI9h90xtjI/edit?ts=608d07dd#gid=2071851540
 
   
-
-

@@ -11,7 +11,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-
+  startApp()
   let cate
   let vendorsDB
   function displayData(category)
@@ -51,7 +51,7 @@ var firebaseConfig = {
 
   function leadVerification(key)
   {
-    document.querySelector(".modal").style.display = "block"
+    $("#myModal").modal('show')
     document.querySelector(".modal-title").innerHTML = `Last verified on ${vendorsDB[key].Verification.replace("T"," @")}`
     document.querySelector(".modal-body").innerHTML = ` <h4 id="modalNumber">${vendorsDB[key].Contact}<button class="btn btn-light ml-3" onclick="copyToClipboard()"><i class="fa fa-copy fa-lg"></i></button></h4>
                                                         <h4>Current Description</h4>
@@ -64,7 +64,6 @@ var firebaseConfig = {
 
   function modalSubmit(key,check)
   {
-    document.querySelector(".modal").style.display = "none"
     let ref = firebase.database().ref(`${cate}/Vendors/${key}`)
     let temp
     if(check)
@@ -128,6 +127,39 @@ var firebaseConfig = {
     }
   }
 
-  displayData("Oxygen")
+  function startApp()
+  {
+    $("#myModal").modal('show')
+    document.querySelector(".close").remove();
+    document.querySelector("#myModal").style.top="0px"
+    document.querySelector("#myModal").style.left="-130px"
+    document.querySelector(".modal-content").classList.add("big")
+    document.querySelector(".modal-title").innerHTML = `Select Leads Category`
+    document.querySelector(".modal-body").innerHTML = `
+    <div class="text-center" id="categoriesModal">
+      <button class="btn btn-success" onclick="displayData('Hospital');temp();">Hospital</button>
+      <button class="btn btn-info" onclick="displayData('Oxygen');temp();">Oxygen</button>
+      <button class="btn btn-danger" onclick="displayData('Blood');temp();">Blood</button>
+      <button class="btn btn-warning" onclick="displayData('Plasma');temp();">Plasma</button>
+      
+      
+      <!-- <a class="btn btn-success " href="/index.html">Ambulance</a>
+      <a class="btn btn-warning " href="/index.html">Covid Test</a>
+      <a class="btn btn-secondary  " href="/index.html">Food Service</a> -->
+
+    </div>`
+
+    // document.querySelector(".categories").addEventListener("click" , ()=>{
+    //     $("#myModal").modal('hide')
+    // })
+ 
+
+  }
+
+  function temp()
+  {
+    $("#myModal").modal('hide')
+  }
+  
 
 
