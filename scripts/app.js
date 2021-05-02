@@ -131,8 +131,7 @@ var firebaseConfig = {
   {
     $("#myModal").modal('show')
     document.querySelector(".close").remove();
-    document.querySelector("#myModal").style.top="0px"
-    document.querySelector("#myModal").style.left="-130px"
+    document.querySelector("#myModal").classList.add("big12")
     document.querySelector(".modal-content").classList.add("big")
     document.querySelector(".modal-title").innerHTML = `Select Leads Category`
     document.querySelector(".modal-body").innerHTML = `
