@@ -198,3 +198,11 @@
 {
     flex-direction: column !important;
 }
+
+.fa-heart{
+    color:red;
+}
+
+.fa-database{
+    color :aqua;
+}
