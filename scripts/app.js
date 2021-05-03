@@ -56,6 +56,7 @@ var firebaseConfig = {
         document.getElementById("tableBody").innerHTML = tb
     })})
     document.querySelector(".tools").classList.remove("d-none")
+    document.querySelector(".toolsText").classList.remove("d-none")
     document.querySelector(".table-responsive").classList.remove("d-none")
     
   }
