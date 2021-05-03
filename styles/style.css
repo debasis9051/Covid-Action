@@ -1,5 +1,5 @@
 .spacer{
-    height: 90px;
+    height: 3rem;
 }
 .links{
     /* height : 9rem; */
@@ -49,6 +49,15 @@
 
    @media only screen and (max-width: 440px)
    {
+    .tools 
+    {
+        display :flex;
+        align-items: center;
+        flex-direction : column ;
+        /* visibility: hidden !important; */
+        justify-content :space-evenly !important ;
+    }
+    
     .flex1{
         display:flex;
         flex-direction :column;
@@ -87,6 +96,11 @@
     #categoriesModal button{
         font-size :x-large !important;
     }
+    /* .flex90{
+        display :flex;
+        flex-wrap :wrap;
+        flex-direction : column;
+    } */
 }
 
    .modal-footer{
@@ -153,6 +167,7 @@
     .navCus{
        justify-content: space-between !important; 
     }
+    
 
 }
 
@@ -163,3 +178,23 @@
     box-shadow: 0px 0px 20px #ffffff;
 }
 
+.tools 
+{
+    display :flex;
+    justify-content : space-around;
+}
+
+.flex91{
+    display : flex;
+    flex-direction : column;
+}
+
+.collection{
+    display : flex;
+
+}
+
+.sortBox
+{
+    flex-direction: column !important;
+}

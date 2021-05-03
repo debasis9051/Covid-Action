@@ -62,18 +62,44 @@
 
     </div>
 
-    <div class="filter d-none ">
-      <select class="" id="filterCategory">
-        <option>Select Category for Filter..</option>
-        <option>Name of the Organization/Dealer</option>
-        <option>Address/Area</option>
-        <option>Status</option>
-      </select>
-      <label for="filterText">Search Filter Text</label>
-      <input type="text" id="filterText">
-      <button class="btn btn-info" onclick="filterData(document.getElementById('filterCategory').value,document.getElementById('filterText').value)">Filter</button>
-      <button id="exitFilter" class="btn btn-danger d-none" onclick="filterClose()">&times;</button>
+    <div class="spacer"></div>
+
+    <div class="tools text-center d-none">
+
+      <div class="filter ">
+        <select class="" id="filterCategory">
+          <option>Select Category for Filter..</option>
+          <option>Name of the Organization/Dealer</option>
+          <option>Address/Area</option>
+          <option>Status</option>
+          <option>Latest Verification</option>
+        </select>
+        <div class="flex91">
+          <label for="filterText">Search Filter Text</label>
+          <input type="text" id="filterText">
+        </div>
+        <button class="btn btn-info m-3" onclick="filterData(document.getElementById('filterCategory').value,document.getElementById('filterText').value)">Filter</button>
+        <button id="exitFilter" class="btn btn-danger d-none m-3" onclick="filterClose()">&times;</button>
+      </div>
+      
+      <div class="sorter ">
+        <div class="sortBox">
+          <select class="mb-2" id="sortCategory">
+            <option>Select Category for Sorting..</option>
+            <option>No. of times Verified</option>
+          </select>
+          <select class="m-3" id="sortOrder">
+            <option>Select Order for Sorting..</option>
+            <option>Ascending</option>
+            <option>Descending</option>
+          </select>
+        </div>
+        <button class="btn btn-info m-3" onclick="sortData(document.getElementById('sortCategory').value,document.getElementById('sortOrder').value)">Sort</button>
+        <button id="exitSort" class="btn btn-danger d-none m-3" onclick="sortClose()">&times;</button>
+      </div>
+
     </div>
+    
 
     <div class="modal" id="myModal">
       <div class="modal-dialog">
