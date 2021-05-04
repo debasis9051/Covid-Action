@@ -11,39 +11,84 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  let category
+  let currentCatData
+  let currentCatFieldId
+  let mapArr = {"Oxygen" : {"Address" : ["Address/Area","text"],
+                            "Contact" : ["Contact number of Organization/Dealer","number"],
+                            "Description" : ["Description","text"],
+                            "Organization" : ["Name of Organization/Dealer","text"],
+                            "Verification" : ["Latest Verification","datetime-local"]},
+                "Plasma" : {"Address" : ["Address/Area","text"],
+                            "Contact" : ["Contact number of Organization/Dealer","number"],
+                            "Description" : ["Description","text"],
+                            "Organization" : ["Name of Organization/Dealer","text"],
+                            "Verification" : ["Latest Verification","datetime-local"]}, 
+                "Blood" : { "Address" : ["Address/Area","text"],
+                            "Contact" : ["Contact number of Organization/Dealer","number"],
+                            "Description" : ["Description","text"],
+                            "Organization" : ["Name of Organization/Dealer","text"],
+                            "Verification" : ["Latest Verification","datetime-local"]}, 
+                "Hospital" :{  "Address" : ["Address/Area","text"],
+                                "Contact" : ["Contact number of Organization/Dealer","number"],
+                                "Beds" : ["Availabilty of Beds","text"],
+                                "Description" : ["Description","text"],
+                                "Organization" : ["Name of Organization/Dealer","text"],
+                                "Verification" : ["Latest Verification","datetime-local"]}, 
+                "Telephonic Doctor Consultation" : {"Availability" : ["Availability","text"],
+                                                    "Contact" : ["Contact number of Organization/Dealer","number"],
+                                                    "Description" : ["Description","text"],
+                                                    "Doctor" : ["Name of Doctor","text"],
+                                                    "Verification" : ["Latest Verification","datetime-local"]}}
 
-document.querySelector(".dataSubmit").addEventListener("click",()=>{
-    let hospital =document.querySelector("#Organization").value
-    let contact=document.querySelector("#Contact").value
-    let description=document.querySelector("#Description").value
-    let address=document.querySelector("#Address").value
-    let verification=document.querySelector("#Verification").value
-    let category=document.querySelector("#Category").value
-    
-    if(checkInputs(hospital,contact,description,address,verification,category))
-    {
-        let mapArr = {"Oxygen": "Oxygen/Vendors", "Blood": "Blood/Vendors", "Plasma": "Plasma/Vendors", "Hospital": "Hospital/Vendors"}
-        var studentsDB= firebase.database().ref(mapArr[category]);
-        studentsDB.child(Date.now()).set({
-            Organization: hospital,
-            Contact: contact,
-            Description: description,
-            Address: address,
-            Verification: verification,
-            Counter: 1,
-            Status: "Working"
-        }).then(()=>{
-            console.log("Data Uploaded")
-        })
-    }
-})
-
-
-function checkInputs(hospital,contact,description,address,verification,category)
+function dataSubmit()
 {
-    if(hospital && contact && description && address && verification && category!="Select Category..")
+    let tempObj = {}
+    for(let i=0;i<currentCatFieldId.length;i++)
+        tempObj[currentCatFieldId[i]] = document.querySelector(`#${currentCatFieldId[i]}`).value
+
+    if(checkInputs(tempObj))
+    {
+        let timeStamp = Date.now()
+        switch(category)
+        {
+            case "Oxygen" :
+            case "Plasma" :
+            case "Blood" :
+            case "Hospital" :   tempObj["Counter"] = 1
+                                tempObj["Status"] = "Working"
+                                tempObj["id"] = timeStamp
+                                break
+            case "Telephonic Doctor Consultation" : tempObj["Counter"] = 1
+                                                    tempObj["id"] = timeStamp
+                                                    break
+            default: console.log("error")
+        }
+
+        let mapArr2 = {"Oxygen": "Oxygen/Vendors", "Blood": "Blood/Vendors", "Plasma": "Plasma/Vendors", "Hospital": "Hospital/Vendors", "Telephonic Doctor Consultation": "Doctor/Vendors"}
+        let vendorsDB= firebase.database().ref(mapArr2[category]);
+        let p = vendorsDB.child(timeStamp).set(tempObj)
+        p.then(()=>{console.log("Data Uploaded")})
+        p.catch(()=>{console.log("Data Upload Error")})
+    }
+}
+
+
+function checkInputs(inputObj)
+{
+    let myCheck = true
+    let tempList = Object.keys(inputObj) 
+    for(let i=0;i<tempList.length;i++)
+    {
+        if(inputObj[tempList[i]]=="")
+        {
+            myCheck = false
+            break
+        }
+    }
+
+    if(myCheck)
     {       
-        console.log("True")
         let error=document.querySelector(".error");
         error.classList.toggle("alert-success",true)
         error.style.display="block"
@@ -54,8 +99,8 @@ function checkInputs(hospital,contact,description,address,verification,category)
         ,8000)
         return true
     }
-    else {
-        console.log("False")
+    else 
+    {
         let error=document.querySelector(".error");
         error.classList.toggle("alert-danger",true)
         error.style.display="block"
@@ -67,3 +112,54 @@ function checkInputs(hospital,contact,description,address,verification,category)
         return false
     }
 }
+
+document.querySelector("#Category").addEventListener("change",(e)=>{
+    let fieldsBody = ""
+    category = e.target.value
+    
+    if(category!="Select Category..")
+    {
+        document.querySelector("#leadSubmit").classList.remove("d-none")
+
+        currentCatData = mapArr[category]
+        currentCatFieldId = Object.keys(currentCatData)
+        let j=0
+
+        for(let i=0;i<parseInt(currentCatFieldId.length/2);i++)       
+        {
+            let tr = `  <div class="form-row mt-3 ml-3 mr-3">
+                            <div class="col-md-2"></div>
+                            <div class="form-group col-md-4">
+                                <label for="${currentCatFieldId[j]}">${currentCatData[currentCatFieldId[j]][0]}</label>
+                                <input type="${currentCatData[currentCatFieldId[j]][1]}" class="form-control" id="${currentCatFieldId[j]}">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="${currentCatFieldId[j+1]}">${currentCatData[currentCatFieldId[j+1]][0]}</label>
+                                <input type="${currentCatData[currentCatFieldId[j+1]][1]}" class="form-control" id="${currentCatFieldId[j+1]}">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>`
+            j+=2
+            fieldsBody += tr
+        }
+        
+        if(j==currentCatFieldId.length-1)
+        {
+            let tr = `  <div class="form-row mt-3 ml-3 mr-3">
+                            <div class="col-md-2"></div>
+                            <div class="form-group col-md-4">
+                                <label for="${currentCatFieldId[j]}">${currentCatData[currentCatFieldId[j]][0]}</label>
+                                <input type="${currentCatData[currentCatFieldId[j]][1]}" class="form-control" id="${currentCatFieldId[j]}">
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>`
+            fieldsBody += tr
+        }
+    }
+    else
+    {
+        document.querySelector("#leadSubmit").classList.add("d-none")      
+    }
+
+    document.querySelector("#Fields").innerHTML = fieldsBody
+})

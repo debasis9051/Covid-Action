@@ -51,66 +51,68 @@
 
     <div class="spacer"></div>
     <div class="data">
+
         <div class="form-row mt-3 ml-3  mr-3">
             <div class="col-md-2"></div>
-            <div class="form-group col-md-4">
-              <label for="Organization">Name of the Organization/Dealer</label>
-              <input type="text" class="form-control" id="Organization">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="Contact">Contact number of Organization/Dealer</label>
-              <input type="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control" id="Contact">
+            <div class="form-group col-md-8">
+              <label for="Category">Category</label>
+              <select class="form-control" id="Category">
+                <option>Select Category..</option>
+                <option>Oxygen</option>
+                <option>Plasma</option>
+                <option>Blood</option>
+                <option>Hospital</option>
+                <option>Telephonic Doctor Consultation</option>
+              </select>
             </div>
             <div class="col-md-2"></div>
         </div>
 
-        <div class="form-row mt-3 ml-3  mr-3">
+        <div id="Fields">
+
+        </div>
+        <!-- <div class="form-row mt-3 ml-3  mr-3">
           <div class="col-md-2"></div>
+          <div class="form-group col-md-4">
+            <label for="Contact">Contact number of Organization/Dealer</label>
+            <input type="number" class="form-control" id="Contact">
+          </div>
           <div class="form-group col-md-4">
             <label for="Description">Description</label>
             <input type="text" class="form-control" id="Description">
           </div>
-          <div class="form-group col-md-4">
-            <label for="Address">Address/Area</label>
-            <input type="text" class="form-control" id="Address">
-          </div>
           <div class="col-md-2"></div>
         </div>
 
         <div class="form-row mt-3 ml-3  mr-3">
           <div class="col-md-2"></div>
           <div class="form-group col-md-4">
+            <label for="Address">Address/Area</label>
+            <input type="text" class="form-control" id="Address">
+          </div>
+          <div class="form-group col-md-4">
             <label for="Verification">Verification Date & Time</label>
             <input type="datetime-local" class="form-control" id="Verification">
           </div>
-          <div class="form-group col-md-4">
-            <label for="Category">Category</label>
-            <select class="form-control" id="Category">
-              <option>Select Category..</option>
-              <option>Oxygen</option>
-              <option>Plasma</option>
-              <option>Blood</option>
-              <option>Hospital</option>
-            </select>
-          </div>
           <div class="col-md-2"></div>
         </div>
-    </div>
+    </div>-->
+
     <div class="form-row mt-3 ml-3  mr-3">
       <div class="col-md-2"></div>
       <div class="form-group col-md-8">
         <div class="error">
           <div class="alert alert-dismissible text-center font-weight-bold ">
-              <p class="errorText"></p>   
-         </div>
+            <p class="errorText"></p>   
+          </div>
         </div>    
       </div>
       <div class="col-md-2"></div>
     </div>
-   
+
     <div class="spacer"></div>
-    <div class="dataSubmit text-center">
-        <button  type="button"class="btn btn-success" >Enter Data to Database</button>
+    <div class="text-center d-none" id="leadSubmit">
+        <button type="button"class="btn btn-success" onclick="dataSubmit()">Enter Data to Database</button>
     </div>
     <div class="spacer"></div>
   </body>

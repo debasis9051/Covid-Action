@@ -29,6 +29,9 @@ var firebaseConfig = {
         if(!snapshot.exists())
             document.getElementById("tableBody").innerHTML = ""
     })
+
+    
+
     let pt = firebase.database().ref(category).get(`Vendors`)
     pt.then((value)=>{value.forEach((values)=>{
         vendorsDB=values.val()
@@ -58,7 +61,7 @@ var firebaseConfig = {
     document.querySelector(".tools").classList.remove("d-none")
     document.querySelector(".toolsText").classList.remove("d-none")
     document.querySelector(".table-responsive").classList.remove("d-none")
-    
+    document.querySelector("#guideDiv").classList.remove("d-none")
   }
 
   function leadVerification(key)
