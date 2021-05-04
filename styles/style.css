@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 .spacer{
     height: 3rem;
 }
@@ -9,6 +12,7 @@
     /* overflow : hidden */
 }
 #categories button{
+    font-weight: bold;
     font-size: larger;
     margin: 10px;
     color: black;
@@ -45,6 +49,8 @@
      padding: 0;
      margin: 0;
      overflow-x: hidden; 
+     font-family: 'Poppins', sans-serif;
+     font-weight: bold;
    }
 
    @media only screen and (max-width: 440px)
@@ -208,3 +214,8 @@
 .fa-database{
     color :aqua;
 }
+
+.guide{
+    color:black;
+}
+
