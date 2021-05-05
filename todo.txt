@@ -1,4 +1,6 @@
-1. Restructuring database code: display correct table in respect to category
-2. Restructuring database code: display correct table data
-3. Restructuring database code: redo filter and sort action based on category columns
+1. check on filterclose
+2. adjust searchfilter text position
+3. fix filter and sort
+    a> consequtive filter
+    b> filter not working after any action
 4. import final.json for every field ( After all features been completed and testing being done)

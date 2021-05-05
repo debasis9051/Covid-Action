@@ -36,7 +36,7 @@
                                 "Organization" : ["Name of Organization/Dealer","text"],
                                 "Verification" : ["Latest Verification","datetime-local"]}, 
                 "Telephonic Doctor Consultation" : {"Availability" : ["Availability","text"],
-                                                    "Contact" : ["Contact number of Organization/Dealer","number"],
+                                                    "Contact" : ["Doctor's Number","number"],
                                                     "Description" : ["Description","text"],
                                                     "Doctor" : ["Name of Doctor","text"],
                                                     "Verification" : ["Latest Verification","datetime-local"]}}
@@ -45,7 +45,7 @@ function dataSubmit()
 {
     let tempObj = {}
     for(let i=0;i<currentCatFieldId.length;i++)
-        tempObj[currentCatFieldId[i]] = document.querySelector(`#${currentCatFieldId[i]}`).value
+        tempObj[currentCatFieldId[i]] = document.querySelector(`#${currentCatFieldId[i]}`).value.trim()
 
     if(checkInputs(tempObj))
     {
