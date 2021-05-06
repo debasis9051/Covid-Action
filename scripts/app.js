@@ -526,7 +526,7 @@ if ('serviceWorker' in navigator) {
   })}
 
   window.addEventListener('beforeinstallprompt', (event) => {
-    console.log('Event : User had not yet installed achivement page :', event);
+    // console.log('Event : User had not yet installed achivement page :', event);
     window.installPrompt = event;
     installAlert.classList.remove('d-none');
 
