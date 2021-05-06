@@ -50,6 +50,11 @@ var firebaseConfig = {
 
     window.localStorage.setItem('UserCurrentCategory', cate);
 
+    firebase.analytics().logEvent('User Category clicked', {
+      userClickedCategory: cate
+    });
+
+
 
     let filterCatOptions = Object.keys(mapArr[category][2])
     let myOpts = "<option>Select Category for Filter..</option>"
