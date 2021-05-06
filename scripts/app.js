@@ -51,7 +51,8 @@ var firebaseConfig = {
     window.localStorage.setItem('UserCurrentCategory', cate);
 
     firebase.analytics().logEvent('User Category clicked', {
-      userClickedCategory: cate
+      userClickedCategory: cate,
+      Page : "Landing Page"
     });
 
 

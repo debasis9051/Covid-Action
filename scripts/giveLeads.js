@@ -88,7 +88,12 @@ function checkInputs(inputObj)
     }
 
     if(myCheck)
-    {       
+    {      let category =document.querySelector("#Category").value 
+        firebase.analytics().logEvent('User Category clicked', {
+            userClickedCategory: category,
+            leadsGive : "Data Uploaded",
+            Page : "Give leads"
+          });
         let error=document.querySelector(".error");
         error.classList.toggle("alert-success",true)
         error.style.display="block"
@@ -100,7 +105,13 @@ function checkInputs(inputObj)
         return true
     }
     else 
-    {
+    {   
+        let category =document.querySelector("#Category").value 
+        firebase.analytics().logEvent('User Category clicked', {
+            userClickedCategory: category,
+            leadsGive : "error Uploading! User End",
+            Page : "Give leads"
+          });
         let error=document.querySelector(".error");
         error.classList.toggle("alert-danger",true)
         error.style.display="block"
