@@ -8,6 +8,8 @@
   <meta name="keywords" content="Coronavirus public database west bengal,CoviBangla">
   <meta name="author" content="Hritwick De, Debasish Debnath">
 
+  <link rel='manifest' href='/manifest.json'>
+
   <link rel="icon" href="/site-logo.jpg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -31,6 +33,13 @@
 
 <script  src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js" defer></script>
 <script  src="./scripts/app.js" defer></script>
+
+<script type="module">
+  import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+</script>
 
 
 </head>
@@ -165,6 +174,9 @@
     <h5 class="text-success" style="font-weight:700;   letter-spacing: 1px;"> <i class="fas fa-hands-helping"></i>      A Volunteer effort by some undergrads <i class="fas fa-hands-helping"></i>    </h5> 
      <a class="btn btn-danger m-2 pl-4 pr-4 px-2 " href="mailto:sunnydebashis2014@gmail.com?cc=hritwick14@gmail.com, lionsraj05@gmail.com,ritabanchakraborty3@gmail.com&subject=Visitor%20from%20CoviBangla"><i class="fas fa-at mr-2"></i> Mail US</a>
   </div>
-
+ 
+  <div class="install text-center ">
+    <a class="btn btn-warning  pr-4 pl-4 mt-2 installBtn" style="color :black; font-weight:700;" ><i class="fas fa-download pr-2"></i>      Install the App</a>
+  </div>
 </body>
 </html>

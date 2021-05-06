@@ -507,3 +507,33 @@ document.querySelector("#filterCategory").addEventListener("change",(e)=>{
 document.querySelector("#toolsButton").addEventListener("click",()=>{
   document.querySelector(".tools").classList.toggle("d-none")
 })
+
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', ()=>{
+    console.log("registers")
+    navigator.serviceWorker.register('../pwabuilder-sw.js');
+  })}
+
+  window.addEventListener('beforeinstallprompt', (event) => {
+    console.log('Event : User had not yet installed achivement page :', event);
+    window.installPrompt = event;
+  });
+  document.querySelector(".installBtn").addEventListener('click', () => {
+    const installpromptEvent = window.installPrompt;
+    console.log("click")
+    // if (!installpromptEvent) {
+    //   return;
+    // }
+    installpromptEvent.prompt();
+    installpromptEvent.userChoice.then((result) => {
+      if (result.outcome === 'accepted') 
+      {
+        console.log('Prompt:User installed achivement-page');
+      } else {
+        console.log('Prompt:User did not installed achivement-page');
+
+      }
+      window.installPrompt = null;
+    });
+  });
