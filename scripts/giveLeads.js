@@ -94,6 +94,11 @@ function checkInputs(inputObj)
             leadsGive : "Data Uploaded",
             Page : "Give leads"
           });
+          gtag('event', `LeadsGivingSuccess-${category5}`, {
+            userClickedCategory: category,
+            leadsGive : "Data Uploaded",
+            Page : "Give leads"
+          });
         let error=document.querySelector(".error");
         error.classList.toggle("alert-success",true)
         error.style.display="block"
@@ -108,6 +113,11 @@ function checkInputs(inputObj)
     {   
         let category5 =document.querySelector("#Category").value 
         firebase.analytics().logEvent(`LeadsGivingError-${category5}`, {
+            userClickedCategory: category5,
+            leadsGive : "error Uploading! User End",
+            Page : "Give leads"
+          });
+          gtag('event', `LeadsGivingError-${category5}`, {
             userClickedCategory: category5,
             leadsGive : "error Uploading! User End",
             Page : "Give leads"

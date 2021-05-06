@@ -55,6 +55,10 @@ var firebaseConfig = {
       Page : "Landing Page"
     });
 
+    gtag('event', `CategoryClicked-${cate}`, {
+      'category': cate
+    });
+
 
 
     let filterCatOptions = Object.keys(mapArr[category][2])
@@ -539,12 +543,18 @@ if ('serviceWorker' in navigator) {
           event: "Install",
           Page : "Landing Page"
         });
+        gtag('event', 'install', {
+          'method': 'Install button Success'
+        });
         console.log('Prompt:User installed ');
         location.reload();
       } else {
         firebase.analytics().logEvent('Error Install', {
           event: "Did not Install",
           Page : "Landing Page"
+        });
+        gtag('event', 'install', {
+          'method': 'Install button Errors'
         });
         console.log('Prompt:User did not installed ');
 
