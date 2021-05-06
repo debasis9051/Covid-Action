@@ -528,6 +528,8 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('beforeinstallprompt', (event) => {
     console.log('Event : User had not yet installed achivement page :', event);
     window.installPrompt = event;
+    installAlert.classList.remove('d-none');
+
   });
   document.querySelector(".installBtn").addEventListener('click', () => {
     const installpromptEvent = window.installPrompt;
@@ -564,8 +566,4 @@ if ('serviceWorker' in navigator) {
   });
 
   let installAlert=document.querySelector(".install")
-  window.addEventListener('beforeinstallprompt', (event) => {
-    console.log('Event : User had not yet installed achivement page :', event);
-    window.installPrompt = event;
-    installAlert.classList.remove('d-none');
-  });
+ 
