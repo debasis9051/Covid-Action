@@ -50,7 +50,7 @@ var firebaseConfig = {
 
     window.localStorage.setItem('UserCurrentCategory', cate);
 
-    firebase.analytics().logEvent('User Category clicked', {
+    firebase.analytics().logEvent(`CategoryClicked-${cate}`, {
       userClickedCategory: cate,
       Page : "Landing Page"
     });
@@ -542,7 +542,7 @@ if ('serviceWorker' in navigator) {
         console.log('Prompt:User installed ');
         location.reload();
       } else {
-        firebase.analytics().logEvent('Install', {
+        firebase.analytics().logEvent('Error Install', {
           event: "Did not Install",
           Page : "Landing Page"
         });
