@@ -535,11 +535,27 @@ if ('serviceWorker' in navigator) {
     installpromptEvent.userChoice.then((result) => {
       if (result.outcome === 'accepted') 
       {
-        console.log('Prompt:User installed achivement-page');
+        firebase.analytics().logEvent('Install', {
+          event: "Install",
+          Page : "Landing Page"
+        });
+        console.log('Prompt:User installed ');
+        location.reload();
       } else {
-        console.log('Prompt:User did not installed achivement-page');
+        firebase.analytics().logEvent('Install', {
+          event: "Did not Install",
+          Page : "Landing Page"
+        });
+        console.log('Prompt:User did not installed ');
 
       }
       window.installPrompt = null;
     });
+  });
+
+  let installAlert=document.querySelector(".install")
+  window.addEventListener('beforeinstallprompt', (event) => {
+    console.log('Event : User had not yet installed achivement page :', event);
+    window.installPrompt = event;
+    installAlert.classList.remove('d-none');
   });
