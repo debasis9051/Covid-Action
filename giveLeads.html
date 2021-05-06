@@ -33,6 +33,10 @@
 <script  src="./scripts/giveLeads.js" defer></script>
 
 </head>
+<style>
+  input,select
+    {font-weight:bold !important;}
+</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary font-weight-bold text-white bg-dark text-uppercase navCus ">
     <a class="navbar-brand" href="/index.html">Covi-Bangla</a>
@@ -54,7 +58,7 @@
 
         <div class="form-row mt-3 ml-3  mr-3">
             <div class="col-md-2"></div>
-            <div class="form-group col-md-8">
+            <div class="form-group col-md-8 bold-input">
               <label for="Category">Category</label>
               <select class="form-control" id="Category">
                 <option>Select Category..</option>
@@ -112,7 +116,7 @@
 
     <div class="spacer"></div>
     <div class="text-center d-none" id="leadSubmit">
-        <button type="button"class="btn btn-success" onclick="dataSubmit()">Enter Data to Database</button>
+        <button type="button"class="btn btn-success" style="color: black; font-weight:bold;" onclick="dataSubmit()"> <i style ="color:black;"class="fas fa-database mr-2"></i>          Enter Data to Database</button>
     </div>
     <div class="spacer"></div>
   </body>

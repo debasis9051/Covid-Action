@@ -246,3 +246,7 @@
     justify-content : space-around;
 
 }
+
+
+    input,select
+    {font-weight:bold;}
