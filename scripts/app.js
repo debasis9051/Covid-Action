@@ -48,6 +48,9 @@ var firebaseConfig = {
 
     cate = category
 
+    window.localStorage.setItem('UserCurrentCategory', cate);
+
+
     let filterCatOptions = Object.keys(mapArr[category][2])
     let myOpts = "<option>Select Category for Filter..</option>"
     for(let i=0;i<filterCatOptions.length;i++)
@@ -151,7 +154,17 @@ var firebaseConfig = {
     temp["Verification"] = dateStringWithTime 
 
     let p = ref.update(temp)
-    p.then(()=>location.reload())
+    p.then(()=>{
+      let category = localStorage.getItem("UserCurrentCategory");
+      if(category)
+      {
+      displayData(category)
+      $('#myModal').modal('toggle')
+    }
+    else{
+      location.reload();
+    }
+    })
     p.catch(()=>console.log("Error uploading from modal"))
   }   
 
