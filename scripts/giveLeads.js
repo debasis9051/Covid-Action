@@ -89,12 +89,12 @@ function checkInputs(inputObj)
 
     if(myCheck)
     {      let category =document.querySelector("#Category").value 
-        firebase.analytics().logEvent(`LeadsGivingSuccess-${category5}`, {
+        firebase.analytics().logEvent(`LeadsGivingSuccess-${category}`, {
             userClickedCategory: category,
             leadsGive : "Data Uploaded",
             Page : "Give leads"
           });
-          gtag('event', `LeadsGivingSuccess-${category5}`, {
+          gtag('event', `LeadsGivingSuccess-${category}`, {
             userClickedCategory: category,
             leadsGive : "Data Uploaded",
             Page : "Give leads"
