@@ -169,7 +169,6 @@ var firebaseConfig = {
     var yyyy = now.getFullYear();
     
     let dateStringWithTime = yyyy+"-"+mm+"-"+dd+"T"+now.getHours()+":"+now.getMinutes()
-    console.log(dateStringWithTime)
     temp["Verification"] = dateStringWithTime 
 
     let p = ref.update(temp)
@@ -177,7 +176,7 @@ var firebaseConfig = {
       let category = localStorage.getItem("UserCurrentCategory");
       if(category)
       {
-        firebase.analytics().logEvent(`Verify${Category}`, {
+        firebase.analytics().logEvent(`Verify${category}`, {
           event: "Verify",
           Page : "Landing Page"
         });
@@ -207,6 +206,7 @@ var firebaseConfig = {
   {
     if(filterCategory!="Select Category for Filter..")
     {
+      console.log("hello filter run")
       document.querySelector("#exitFilter").classList.remove("d-none")
 
       let filter, table, tr, td, txtValue;
@@ -238,12 +238,14 @@ var firebaseConfig = {
   }
   function filterClose()
   {
-    displayData(cate)
-    if(!document.querySelector("#exitSort").classList.contains("d-none"))
+
+    let table = document.getElementById("tableBody");
+    let tr = table.getElementsByTagName("tr");
+    for(let i=0;i<tr.length;i++) 
     {
-      sortData(document.querySelector("#sortCategory").value,document.querySelector("#sortOrder").value)
+      tr[i].classList.remove("d-none")
     }
-    
+
     document.querySelector("#exitFilter").classList.add("d-none")
   }
 
@@ -311,15 +313,22 @@ var firebaseConfig = {
   }
   function sortClose()
   {
-    let myTempa = document.querySelector("#filterCategory").value
-    let myTempb = document.querySelector("#filterText").value
-    console.log(myTempa,myTempb)
-    displayData(cate)
-    if(!document.querySelector("#exitFilter").classList.contains("d-none"))
-    {
-      filterData(myTempa,myTempb)
-    }
+    let myTempA = document.querySelector("#filterCategory").value
+    let myTempB = document.querySelector("#filterText").value
 
+    console.log(myTempA,myTempB)
+
+    if(document.querySelector("#exitFilter").classList.contains("d-none"))
+    {
+      console.log("filter button is not active")
+      displayData(cate)
+    }
+    else 
+    {
+      console.log("filter button is active")
+      displayData(cate)
+      filterData(myTempA,myTempB) 
+    }
     document.querySelector("#exitSort").classList.add("d-none")
   }
   // function filterData(filterCategory,filterText)
@@ -532,12 +541,17 @@ document.querySelector("#filterCategory").addEventListener("change",(e)=>{
 
 document.querySelector("#toolsButton").addEventListener("click",()=>{
   document.querySelector(".tools").classList.toggle("d-none")
+  firebase.analytics().logEvent(`Arrange Data Button`, {
+    Page : "Landing Page"
+  });
+  gtag('event', 'Arrange Data Button', {
+    'method': 'Arrange data button clicked'
+  });
 })
 
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', ()=>{
-    console.log("registers")
     navigator.serviceWorker.register('../pwabuilder-sw.js');
   })}
 

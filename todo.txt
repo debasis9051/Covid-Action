@@ -1,6 +1,8 @@
-1. check on filterclose
-2. adjust searchfilter text position
-3. fix filter and sort
-    a> consequtive filter
-    b> filter not working after any action
-4. import final.json for every field ( After all features been completed and testing being done)
+1. restructure Filter and Sort based on new logic
+
+2. fix filter and sort
+3. ankan css fix
+4. "important note" border css adjust
+5. program to remove duplicate data from database
+
+6. push analytics category mistake

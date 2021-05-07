@@ -8,9 +8,19 @@
     appId: "1:625663046445:web:2e7ada6f91b29f4261d9a4",
     measurementId: "G-F3GTRYTY12"
   };
+// var firebaseConfig = {
+//     apiKey: "AIzaSyB65Gi_g6KxftPytbB7xkN5rYGtzpNmF78",
+//     authDomain: "book-inventory-7a96c.firebaseapp.com",
+//     databaseURL: "https://book-inventory-7a96c.firebaseio.com",
+//     projectId: "book-inventory-7a96c",
+//     storageBucket: "book-inventory-7a96c.appspot.com",
+//     messagingSenderId: "987737645849",
+//     appId: "1:987737645849:web:80f03e213e0028d40f1b88",
+//   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
   let category
   let currentCatData
   let currentCatFieldId
