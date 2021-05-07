@@ -168,6 +168,13 @@ var firebaseConfig = {
       let category = localStorage.getItem("UserCurrentCategory");
       if(category)
       {
+        firebase.analytics().logEvent(`Verify${Category}`, {
+          event: "Verify",
+          Page : "Landing Page"
+        });
+        gtag('event', 'install', {
+          'method': 'Install button Success'
+        });
       displayData(category)
       $('#myModal').modal('toggle')
     }
