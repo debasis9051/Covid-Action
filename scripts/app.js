@@ -137,6 +137,7 @@ var firebaseConfig = {
   function leadVerification(key)
   {
     $("#myModal").modal('show')
+    // $('#myModal').focus()
     document.querySelector(".modal-title").innerHTML = `Last verified on ${vendorsDB[key].Verification.replace("T"," @")}`
     document.querySelector(".modal-body").innerHTML = ` <h4 id="modalNumber">${vendorsDB[key].Contact}<button class="btn btn-light ml-3" onclick="copyToClipboard()"><i class="fa fa-copy fa-lg"></i></button></h4>
                                                         <h4>Current Description</h4>
@@ -206,7 +207,6 @@ var firebaseConfig = {
   {
     if(filterCategory!="Select Category for Filter..")
     {
-      console.log("hello filter run")
       document.querySelector("#exitFilter").classList.remove("d-none")
 
       let filter, table, tr, td, txtValue;
@@ -230,10 +230,10 @@ var firebaseConfig = {
           {
             if(txtValue.toUpperCase().indexOf(filter) <= -1) 
               tr[i].classList.add("d-none");
-          }
-          
+          } 
         }
       }
+
     }
   }
   function filterClose()
@@ -316,18 +316,33 @@ var firebaseConfig = {
     let myTempA = document.querySelector("#filterCategory").value
     let myTempB = document.querySelector("#filterText").value
 
-    console.log(myTempA,myTempB)
+    let currentCatKeysList = mapArr[cate][1]
+    let tb=""
+    for(let i=0;i<Object.keys(vendorsDB).length;i++)
+    {
+      let currentData = vendorsDB[Object.keys(vendorsDB)[i]];
 
-    if(document.querySelector("#exitFilter").classList.contains("d-none"))
-    {
-      console.log("filter button is not active")
-      displayData(cate)
+      let tr2= `<tr>`
+      tr2+= `<td>${i+1}</td>`
+      for(let j=0;j<currentCatKeysList.length;j++)
+      {
+        if(currentCatKeysList[j] == "Verification")
+          tr2+= `<td>${currentData[currentCatKeysList[j]].replace("T"," @")}</td>`
+        else
+          tr2+= `<td>${currentData[currentCatKeysList[j]]}</td>`
+      }
+      tr2+= `<td class="flex1">
+                <button class="btn btn-success verifyLead" onclick="leadVerification(${Object.keys(vendorsDB)[i]})">Verify our Lead</button>
+                <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
+            </td>`
+
+      tb+=tr2
     }
-    else 
+    document.getElementById("tableBody").innerHTML = tb
+
+    if(!document.querySelector("#exitFilter").classList.contains("d-none"))
     {
-      console.log("filter button is active")
-      displayData(cate)
-      filterData(myTempA,myTempB) 
+      filterData(myTempA,myTempB)
     }
     document.querySelector("#exitSort").classList.add("d-none")
   }

@@ -1,8 +1,5 @@
-1. restructure Filter and Sort based on new logic
+1. ankan css fix
+2. "important note" border css adjust
+3. program to remove duplicate data from database
 
-2. fix filter and sort
-3. ankan css fix
-4. "important note" border css adjust
-5. program to remove duplicate data from database
-
-6. push analytics category mistake
+5>Select 1 phn nuber from list of numbers
