@@ -24,23 +24,28 @@ var firebaseConfig = {
   let mapArr = {"Oxygen" : [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                             ["Organization", "Contact", "Address", "Description", "Verification", "Status", "Counter"],
                             {"Name of Organization/Dealer" : 1, "Address/Area" : 3, "Latest Verification" : 5, "Status" : 6},
-                            {"No. of times Verified" : 7}],
+                            {"No. of times Verified" : 7},
+                            {}],
                 "Plasma" : [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                             ["Organization", "Contact", "Address", "Description", "Verification", "Status", "Counter"],
                             {"Name of Organization/Dealer" : 1, "Address/Area" : 3, "Latest Verification" : 5, "Status" : 6},
-                            {"No. of times Verified" : 7}],
+                            {"No. of times Verified" : 7},
+                            {}],
                 "Blood" :  [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                             ["Organization", "Contact", "Address", "Description", "Verification", "Status", "Counter"],
                             {"Name of Organization/Dealer" : 1, "Address/Area" : 1, "Latest Verification" : 5, "Status" : 6},
-                            {"No. of times Verified" : 7}],
+                            {"No. of times Verified" : 7},
+                            {}],
                 "Hospital" : [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Avalability of Beds", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                               ["Organization", "Contact", "Address", "Beds", "Description", "Verification", "Status", "Counter"],
                               {"Name of Organization/Dealer" : 1, "Address/Area" : 3, "Latest Verification" : 6, "Status" : 7, "Avalability of Beds" : 4},
-                              {"No. of times Verified" : 8}],
-                "Doctor" : [["Sl. No.", "Name of Doctor", "Doctor's Number", "Availability", "Description", "Latest Verification", "No. of times Verified","Actions"],
-                            ["Doctor", "Contact", "Availability", "Description", "Verification", "Counter"],
+                              {"No. of times Verified" : 8},
+                              {"Beds" : "Availability of Beds"}],
+                "Doctor" : [["Sl. No.", "Name of Doctor", "Doctor's Number", "Availability", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
+                            ["Doctor", "Contact", "Availability", "Description", "Verification", "Status", "Counter"],
                             {"Availability" : 3, "Latest Verification" : 5},
-                            {"No. of times Verified" : 6}]}
+                            {"No. of times Verified" : 6},
+                            {"Availability" : "Available time of Doctor"}]}
 
   let cate
   let vendorsDB
@@ -136,14 +141,29 @@ var firebaseConfig = {
 
   function leadVerification(key)
   {
+    // $("#myModal").on('show.bs.modal', ()=>{
+    //   $("#myModal").css("margin-top", $(window).height()/2 - $(".modal-content").height()/2)
+    // })
+
     $("#myModal").modal('show')
     // $('#myModal').focus()
     document.querySelector(".modal-title").innerHTML = `Last verified on ${vendorsDB[key].Verification.replace("T"," @")}`
-    document.querySelector(".modal-body").innerHTML = ` <h4 id="modalNumber">${vendorsDB[key].Contact}<button class="btn btn-light ml-3" onclick="copyToClipboard()"><i class="fa fa-copy fa-lg"></i></button></h4>
-                                                        <h4>Current Description</h4>
-                                                        <p>${vendorsDB[key].Description}</p>
-                                                        <h4>Update the description</h4>
-                                                        <textarea id="newDescription" class="text-center" style="resize: vertical;"></textarea>`
+    document.querySelector(".modal-body").innerHTML = `<h4 id="modalNumber">${vendorsDB[key].Contact}<button class="btn btn-light ml-3" onclick="copyToClipboard()"><i class="fa fa-copy fa-lg"></i></button></h4>`
+
+    let currentModalInputObj = mapArr[cate][4]
+    let currentModalInputKeys = Object.keys(currentModalInputObj)
+    
+    for(let i=0;i<currentModalInputKeys.length;i++)
+    {
+      document.querySelector(".modal-body").innerHTML += `<h4>Current ${currentModalInputObj[currentModalInputKeys[i]]}</h4>
+                                                          <p>${vendorsDB[key][currentModalInputKeys[i]]}</p>
+                                                          <h4>Update the ${currentModalInputObj[currentModalInputKeys[i]]}</h4>
+                                                          <textarea id="new${currentModalInputKeys[i]}" class="text-center" style="resize: vertical;"></textarea>` 
+    }
+    document.querySelector(".modal-body").innerHTML +=`<h4>Current Description</h4>
+                                                      <p>${vendorsDB[key].Description}</p>
+                                                      <h4>Update the description</h4>
+                                                      <textarea id="newDescription" class="text-center" style="resize: vertical;"></textarea>`
     document.querySelector(".modal-footer").innerHTML = `   <button type="button" class="btn btn-outline-success" onclick="modalSubmit(${key},true)">Working</button>
                                                             <button type="button" class="btn btn-outline-danger" onclick="modalSubmit(${key},false)">Not Working</button>`
   }  
@@ -151,6 +171,7 @@ var firebaseConfig = {
   function modalSubmit(key,check)
   {
     let ref = firebase.database().ref(`${cate}/Vendors/${key}`)
+
     let temp
     if(check)
         temp = {"Status": "Working"}
@@ -159,10 +180,20 @@ var firebaseConfig = {
 
     let newDesc = document.querySelector("#newDescription").value.trim()
     if(newDesc)
-    {
         temp["Description"] = newDesc
-    }
+
     temp["Counter"] = vendorsDB[key].Counter + 1
+    
+    let currentModalInputObj = mapArr[cate][4]
+    let currentModalInputKeys = Object.keys(currentModalInputObj)
+    for(let i=0;i<currentModalInputKeys.length;i++)
+    {
+      let myTempVal = document.querySelector(`#new${currentModalInputKeys[i]}`).value.trim()
+      if(myTempVal)
+      {
+          temp[`${currentModalInputKeys[i]}`] = myTempVal
+      } 
+    }
 
     let now = new Date()
     let dd = String(now.getDate()).padStart(2, '0');

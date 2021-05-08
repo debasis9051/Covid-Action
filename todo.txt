@@ -1,5 +1,9 @@
-1. ankan css fix
-2. "important note" border css adjust
-3. program to remove duplicate data from database
+1. modal center fix viewport   try fixed top property
 
-5>Select 1 phn nuber from list of numbers
+2. status property add to doctor database
+
+1. ankan css fix [filter to search]
+2. "important note" border css adjust
+3. "search filter text" center
+
+3. program to remove duplicate data from database
