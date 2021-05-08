@@ -24,32 +24,46 @@
   let category
   let currentCatData
   let currentCatFieldId
-  let mapArr = {"Oxygen" : {"Address" : ["Address/Area","text"],
+  let mapArr = {"Oxygen" :[{"Organization" : ["Name of Organization/Dealer","text"],
+                            "Address" : ["Address/Area","text"],
                             "Contact" : ["Contact number of Organization/Dealer","number"],
                             "Description" : ["Description","text"],
-                            "Organization" : ["Name of Organization/Dealer","text"],
                             "Verification" : ["Latest Verification","datetime-local"]},
-                "Plasma" : {"Address" : ["Address/Area","text"],
+                            "Oxygen/Vendors"],
+                "Plasma" :[{"Organization" : ["Name of Organization/Dealer","text"],
+                            "Address" : ["Address/Area","text"],
                             "Contact" : ["Contact number of Organization/Dealer","number"],
                             "Description" : ["Description","text"],
-                            "Organization" : ["Name of Organization/Dealer","text"],
-                            "Verification" : ["Latest Verification","datetime-local"]}, 
-                "Blood" : { "Address" : ["Address/Area","text"],
+                            "Verification" : ["Latest Verification","datetime-local"]},
+                            "Plasma/Vendors"], 
+                "Blood" : [{"Organization" : ["Name of Organization/Dealer","text"],
+                            "Address" : ["Address/Area","text"],
                             "Contact" : ["Contact number of Organization/Dealer","number"],
                             "Description" : ["Description","text"],
-                            "Organization" : ["Name of Organization/Dealer","text"],
-                            "Verification" : ["Latest Verification","datetime-local"]}, 
-                "Hospital" :{  "Address" : ["Address/Area","text"],
+                            "Verification" : ["Latest Verification","datetime-local"]},
+                            "Blood/Vendors"], 
+                "Hospital" :[{  "Organization" : ["Name of Organization/Dealer","text"],
+                                "Address" : ["Address/Area","text"],
                                 "Contact" : ["Contact number of Organization/Dealer","number"],
                                 "Beds" : ["Availabilty of Beds","text"],
                                 "Description" : ["Description","text"],
-                                "Organization" : ["Name of Organization/Dealer","text"],
-                                "Verification" : ["Latest Verification","datetime-local"]}, 
-                "Telephonic Doctor Consultation" : {"Availability" : ["Availability","text"],
+                                "Verification" : ["Latest Verification","datetime-local"]},
+                                "Hospital/Vendors"], 
+                "Telephonic Doctor Consultation" :[{"Doctor" : ["Name of Doctor","text"],
                                                     "Contact" : ["Doctor's Number","number"],
+                                                    "Availability" : ["Availability","text"],
                                                     "Description" : ["Description","text"],
-                                                    "Doctor" : ["Name of Doctor","text"],
-                                                    "Verification" : ["Latest Verification","datetime-local"]}}
+                                                    "Verification" : ["Latest Verification","datetime-local"]},
+                                                    "Doctor/Vendors"],
+                "Food Service" : [{ "Organization" : ["Name of Organization/Dealer","text"],
+                                    "Address" : ["Address/Area","text"],
+                                    "Contact" : ["Contact number of Organization/Dealer","number"],
+                                    "Rate" : ["Rate","text"],
+                                    "Type" : ["Type of Food","text"],
+                                    "Description" : ["Description","text"],
+                                    "Verification" : ["Latest Verification","datetime-local"]},
+                                    "Food/Vendors"],
+                }
 
 function dataSubmit()
 {
@@ -65,18 +79,16 @@ function dataSubmit()
             case "Oxygen" :
             case "Plasma" :
             case "Blood" :
-            case "Hospital" :   tempObj["Counter"] = 1
-                                tempObj["Status"] = "Working"
-                                tempObj["id"] = timeStamp
-                                break
+            case "Hospital" :
+            case "Food Service" :
             case "Telephonic Doctor Consultation" : tempObj["Counter"] = 1
+                                                    tempObj["Status"] = "Working"                                                        
                                                     tempObj["id"] = timeStamp
                                                     break
             default: console.log("error")
         }
 
-        let mapArr2 = {"Oxygen": "Oxygen/Vendors", "Blood": "Blood/Vendors", "Plasma": "Plasma/Vendors", "Hospital": "Hospital/Vendors", "Telephonic Doctor Consultation": "Doctor/Vendors"}
-        let vendorsDB= firebase.database().ref(mapArr2[category]);
+        let vendorsDB= firebase.database().ref(mapArr[category][1]);
         let p = vendorsDB.child(timeStamp).set(tempObj)
         p.then(()=>{console.log("Data Uploaded")})
         p.catch(()=>{console.log("Data Upload Error")})
@@ -98,17 +110,18 @@ function checkInputs(inputObj)
     }
 
     if(myCheck)
-    {      let category =document.querySelector("#Category").value 
+    {
         firebase.analytics().logEvent(`LeadsGivingSuccess-${category}`, {
             userClickedCategory: category,
             leadsGive : "Data Uploaded",
             Page : "Give leads"
-          });
-          gtag('event', `LeadsGivingSuccess-${category}`, {
-            userClickedCategory: category,
-            leadsGive : "Data Uploaded",
-            Page : "Give leads"
-          });
+        });
+        gtag('event', `LeadsGivingSuccess-${category}`, {
+        userClickedCategory: category,
+        leadsGive : "Data Uploaded",
+        Page : "Give leads"
+        });
+
         let error=document.querySelector(".error");
         error.classList.toggle("alert-success",true)
         error.style.display="block"
@@ -121,17 +134,18 @@ function checkInputs(inputObj)
     }
     else 
     {   
-        let category5 =document.querySelector("#Category").value 
-        firebase.analytics().logEvent(`LeadsGivingError-${category5}`, {
-            userClickedCategory: category5,
+        
+        firebase.analytics().logEvent(`LeadsGivingError-${category}`, {
+            userClickedCategory: category,
             leadsGive : "error Uploading! User End",
             Page : "Give leads"
-          });
-          gtag('event', `LeadsGivingError-${category5}`, {
-            userClickedCategory: category5,
-            leadsGive : "error Uploading! User End",
-            Page : "Give leads"
-          });
+        });
+        gtag('event', `LeadsGivingError-${category}`, {
+        userClickedCategory: category,
+        leadsGive : "error Uploading! User End",
+        Page : "Give leads"
+        });
+
         let error=document.querySelector(".error");
         error.classList.toggle("alert-danger",true)
         error.style.display="block"
@@ -152,7 +166,7 @@ document.querySelector("#Category").addEventListener("change",(e)=>{
     {
         document.querySelector("#leadSubmit").classList.remove("d-none")
 
-        currentCatData = mapArr[category]
+        currentCatData = mapArr[category][0]
         currentCatFieldId = Object.keys(currentCatData)
         let j=0
 
@@ -194,3 +208,15 @@ document.querySelector("#Category").addEventListener("change",(e)=>{
 
     document.querySelector("#Fields").innerHTML = fieldsBody
 })
+
+function startGiveLead()
+{
+    let list = Object.keys(mapArr)
+    document.querySelector("#Category").innerHTML = `<option>Select Category..</option>`
+    for(let i=0;i<list.length;i++)
+    {
+        document.querySelector("#Category").innerHTML += `<option>${list[i]}</option>`
+    }
+}
+
+startGiveLead()

@@ -21,31 +21,44 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   
+  // 1. column names
+  // 2. value keys
+  // 3. filter list with array positioning
+  // 4. sort list with [array positioning,type of filter]
+  // 5. modal verification custom field
+
+
   let mapArr = {"Oxygen" : [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                             ["Organization", "Contact", "Address", "Description", "Verification", "Status", "Counter"],
-                            {"Name of Organization/Dealer" : 1, "Address/Area" : 3, "Latest Verification" : 5, "Status" : 6},
+                            {"Name of Organization/Dealer" : [1,0], "Address/Area" : [3,0], "Latest Verification" : [5,0], "Status" : [6,1]},
                             {"No. of times Verified" : 7},
                             {}],
                 "Plasma" : [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                             ["Organization", "Contact", "Address", "Description", "Verification", "Status", "Counter"],
-                            {"Name of Organization/Dealer" : 1, "Address/Area" : 3, "Latest Verification" : 5, "Status" : 6},
+                            {"Name of Organization/Dealer" : [1,0], "Address/Area" : [3,0], "Latest Verification" : [5,0], "Status" : [6,1]},
                             {"No. of times Verified" : 7},
                             {}],
                 "Blood" :  [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                             ["Organization", "Contact", "Address", "Description", "Verification", "Status", "Counter"],
-                            {"Name of Organization/Dealer" : 1, "Address/Area" : 1, "Latest Verification" : 5, "Status" : 6},
+                            {"Name of Organization/Dealer" : [1,0], "Address/Area" : [1,0], "Latest Verification" : [5,0], "Status" : [6,1]},
                             {"No. of times Verified" : 7},
                             {}],
                 "Hospital" : [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Avalability of Beds", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                               ["Organization", "Contact", "Address", "Beds", "Description", "Verification", "Status", "Counter"],
-                              {"Name of Organization/Dealer" : 1, "Address/Area" : 3, "Latest Verification" : 6, "Status" : 7, "Avalability of Beds" : 4},
+                              {"Name of Organization/Dealer" : [1,0], "Address/Area" : [3,0], "Latest Verification" : [6,0], "Status" : [7,0], "Avalability of Beds" : [4,1]},
                               {"No. of times Verified" : 8},
                               {"Beds" : "Availability of Beds"}],
                 "Doctor" : [["Sl. No.", "Name of Doctor", "Doctor's Number", "Availability", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
                             ["Doctor", "Contact", "Availability", "Description", "Verification", "Status", "Counter"],
-                            {"Availability" : 3, "Latest Verification" : 5},
+                            {"Availability" : [3,0], "Latest Verification" : [5,0], "Status" : [6,0]},
                             {"No. of times Verified" : 6},
-                            {"Availability" : "Available time of Doctor"}]}
+                            {"Availability" : "Available time of Doctor"}],
+                "Food" : [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Type", "Rate", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
+                          ["Organization", "Contact", "Address", "Type", "Rate", "Description", "Verification", "Status", "Counter"],
+                          {"Name of Organization/Dealer" : [1,0], "Address/Area" : [3,0], "Latest Verification" : [7,0], "Status" : [8,1], "Type" : [4,1]},
+                          {"No. of times Verified" : 8},
+                          {"Type" : "Type", "Rate" : "Rate"}]
+              }
 
   let cate
   let vendorsDB
@@ -58,6 +71,7 @@ var firebaseConfig = {
     document.querySelector("#bloodCategory").classList.remove("highlighter")
     document.querySelector("#plasmaCategory").classList.remove("highlighter")
     document.querySelector("#doctorCategory").classList.remove("highlighter")
+    document.querySelector("#foodCategory").classList.remove("highlighter")
     document.querySelector(`#${category.toLowerCase()}Category`).classList.add("highlighter")
 
     cate = category
@@ -68,12 +82,9 @@ var firebaseConfig = {
       userClickedCategory: cate,
       Page : "Landing Page"
     });
-
     gtag('event', `CategoryClicked-${cate}`, {
       'category': cate
     });
-
-
 
     let filterCatOptions = Object.keys(mapArr[category][2])
     let myOpts = "<option>Select Category for Filter..</option>"
@@ -242,17 +253,20 @@ var firebaseConfig = {
 
       let filter, table, tr, td, txtValue;
       let currentCatFilterData = mapArr[cate][2]
-      
+      let currentCatFilterColNo = currentCatFilterData[filterCategory][0]
+      let currentCatFilterType = currentCatFilterData[filterCategory][1]
+
+
       filter = filterText.toUpperCase();
       table = document.getElementById("tableBody");
       tr = table.getElementsByTagName("tr");
       for(let i=0;i<tr.length;i++) 
       {
-        td = tr[i].getElementsByTagName("td")[currentCatFilterData[filterCategory]];
+        td = tr[i].getElementsByTagName("td")[currentCatFilterColNo];
         if(td)
         {
           txtValue = td.textContent || td.innerText;
-          if(filterCategory == "Status")
+          if(currentCatFilterType == 1)
           {
             if(txtValue.toUpperCase() !== filter.toUpperCase())    
               tr[i].classList.add("d-none");

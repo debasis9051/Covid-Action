@@ -1,9 +1,14 @@
+2. add multiple contact input in giveLeads
+2. improve call facility for multiple numbers   (contact data must be in this format 8482055025 / 97486402(if landline)  [number 8/10 digit] / [number 8/10 digit] / ...)
+
+5. program to remove duplicate data from database(update verification time)[check only check organization ->retain previousdata.., in case of number make it two numbers]
+6. program to take continuous offline backup of database   day backup 11 am, day backup 11 pm    autostart facility
+
 1. modal center fix viewport   try fixed top property
+2. ankan css fix [filter to search]
+3. "important note" border css adjust
+4. "search filter text" center
 
-2. status property add to doctor database
 
-1. ankan css fix [filter to search]
-2. "important note" border css adjust
-3. "search filter text" center
-
-3. program to remove duplicate data from database
+6. new categories ambulance, rtpcr test
+5. additional feature patient request   (public forum)
