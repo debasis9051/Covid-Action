@@ -146,18 +146,13 @@ var firebaseConfig = {
     })})
     
     document.querySelector(".toolsText").classList.remove("d-none")
-    document.querySelector(".table-responsive").classList.remove("d-none")
+    document.querySelector(".table-element").classList.remove("d-none")
     document.querySelector("#guideDiv").classList.remove("d-none")
   }
 
   function leadVerification(key)
   {
-    // $("#myModal").on('show.bs.modal', ()=>{
-    //   $("#myModal").css("margin-top", $(window).height()/2 - $(".modal-content").height()/2)
-    // })
-
     $("#myModal").modal('show')
-    // $('#myModal').focus()
     document.querySelector(".modal-title").innerHTML = `Last verified on ${vendorsDB[key].Verification.replace("T"," @")}`
     document.querySelector(".modal-body").innerHTML = `<h4 id="modalNumber">${vendorsDB[key].Contact}<button class="btn btn-light ml-3" onclick="copyToClipboard()"><i class="fa fa-copy fa-lg"></i></button></h4>`
 
@@ -223,7 +218,7 @@ var firebaseConfig = {
           event: "Verify",
           Page : "Landing Page"
         });
-        gtag('event', 'install', {
+        gtag('event', 'verify', {
           'method': 'Install button Success'
         });
         displayData(category)
@@ -247,6 +242,16 @@ var firebaseConfig = {
 
   function filterData(filterCategory,filterText)
   {
+    
+    firebase.analytics().logEvent(`FilterData-${cate}`, {
+      event: "Filter",
+      Page : "Landing Page"
+    });
+    gtag('event', 'filter', {
+      'method': 'Install button Success'
+    });
+
+
     if(filterCategory!="Select Category for Filter..")
     {
       document.querySelector("#exitFilter").classList.remove("d-none")
@@ -297,6 +302,16 @@ var firebaseConfig = {
 
   function sortData(sortCategory,sortOrder)
   {
+
+    firebase.analytics().logEvent(`SortData-${cate}`, {
+      event: "Sort",
+      Page : "Landing Page"
+    });
+    gtag('event', 'sort', {
+      'method': 'Install button Success'
+    });
+
+
     if((sortCategory!="Select Category for Sorting..")&&(sortOrder!="Select Order for Sorting.."))
     {
       document.querySelector("#exitSort").classList.remove("d-none")

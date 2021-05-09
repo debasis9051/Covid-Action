@@ -85,12 +85,12 @@ document.body.appendChild(el);
     </div>
     <div class="tools text-center d-none theme bg-secondary m-3 p-5">
       <div class="filter ">
-        <select class="" id="filterCategory"></select>
+        <select class=" m-3" id="filterCategory"></select>
         <div class="flex91">
-          <label for="filterText">Search Filter Text</label>
+          <label for="filterText top">Search Filter Text</label>
           <input type="text" id="filterText">
         </div>
-        <button class="btn btn-info m-3" onclick="filterData(document.getElementById('filterCategory').value,document.getElementById('filterText').value)">Filter</button>
+        <button class="btn btn-info m-3" onclick="filterData(document.getElementById('filterCategory').value,document.getElementById('filterText').value)"><i class="fas fa-search p-1"></i>          Search</button>
         <button id="exitFilter" class="btn btn-danger d-none m-3" onclick="filterClose()">&times;</button>
       </div>
       
@@ -105,7 +105,7 @@ document.body.appendChild(el);
             <option>Descending</option>
           </select>
         </div>
-        <button class="btn btn-info m-3" onclick="sortData(document.getElementById('sortCategory').value,document.getElementById('sortOrder').value)">Sort</button>
+        <button class="btn btn-info m-3" onclick="sortData(document.getElementById('sortCategory').value,document.getElementById('sortOrder').value)"><i class="fas fa-sort p-1"></i>         Sort</button>
         <button id="exitSort" class="btn btn-danger d-none m-3" onclick="sortClose()">&times;</button>
       </div>
 
@@ -133,8 +133,8 @@ document.body.appendChild(el);
       <div class="col-md-4"></div>
       <div class="form-group col-md-4">
         <div class="guide bg-warning container text-center pb-2  ">
-          <h4 class="font-weight-bold" style="border: 2px solid rgb(44, 8, 8);
-          border-radius: 255px 115px 225px 25px/325px 225px 155px 255px;"><i class="fas fa-exclamation-triangle"></i> Important Note <i class="fas fa-exclamation-triangle"></i>          </h4>
+          <h4 class="font-weight-bold" style="";
+          border-radius: 255px 45px 725px 35px/35px 625px 45px 755px;"><i class="fas fa-exclamation-triangle"></i> Important Note <i class="fas fa-exclamation-triangle"></i>          </h4>
           <div class="bg-danger theme font-weight-bold mt-3 " style="font-size: 16px;">Data may be delayed or partial. Please verify with the Organization.  </div>
         <div class="bg-success theme mt-3 ">
           <h5 class="font-weight-bold " style="text-decoration:underline;">Help people to verify Leads</h5>
@@ -149,7 +149,7 @@ document.body.appendChild(el);
 
   <div class="spacer"></div>
 
-  <div class="table-responsive d-none">
+  <div class="table-element table-responsive d-none">
     <table class="table table-hover">
       <thead id="tableHead">
         

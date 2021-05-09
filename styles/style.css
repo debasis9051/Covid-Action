@@ -72,10 +72,7 @@
     .verifyLead{
         width :100px;
     }
-    #myModal {
-        position:absolute;
-        top : 20vh;
-    }
+   
     .student-profile{
         margin : 10px 8vw 10px 8vw
     }
@@ -118,15 +115,11 @@
        margin: 0px !important;
    }
 
-   #newDescription{
+   #newDescription,#newType,#newRate{
        width :100%;
    }
 
-   #myModal {
-        position:absolute;
-        top : 25vh;
-   }
-
+  
 .student-profile{
     margin : 10px 25vw 10px 25vw
 }
@@ -251,5 +244,3 @@
     input,select
     {font-weight:bold;}
 
-
-   

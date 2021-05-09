@@ -4112,6 +4112,149 @@
         "Status": "Working",
         "Verification": "2021-05-08T13:47",
         "id": 1620461782815
+      },
+      "1620488791892": {
+        "Address": "𝙎𝙖𝙡𝙩 𝙇𝙖𝙠𝙚",
+        "Beds": "Available",
+        "Contact": "03366063800",
+        "Counter": 1,
+        "Description": "𝙄𝙘𝙪 𝙗𝙚𝙙𝙨 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙛𝙤𝙧 𝙖𝙙𝙢𝙞𝙨𝙨𝙞𝙤𝙣",
+        "Organization": "Dhakuri",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:04",
+        "id": 1620488791892
+      },
+      "1620488976382": {
+        "Address": "𝘾𝙤𝙣𝙩𝙖𝙘𝙩 𝙩𝙝𝙚𝙢",
+        "Beds": "Available",
+        "Contact": "9831539000",
+        "Counter": 1,
+        "Description": "𝙄𝙘𝙪 𝙗𝙚𝙙𝙨 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙛𝙤𝙧 𝙖𝙙𝙢𝙞𝙨𝙨𝙞𝙤𝙣",
+        "Organization": "𝘾𝙝𝙖𝙧𝙣𝙤𝙠",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:19",
+        "id": 1620488976382
+      },
+      "1620489033157": {
+        "Address": "𝘾𝙤𝙣𝙩𝙖𝙘𝙩 𝙩𝙝𝙚𝙢",
+        "Beds": "Available",
+        "Contact": "8334002567",
+        "Counter": 1,
+        "Description": "𝙄𝙘𝙪 𝙗𝙚𝙙𝙨 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙛𝙤𝙧 𝙖𝙙𝙢𝙞𝙨𝙨𝙞𝙤𝙣",
+        "Organization": "𝘾𝙝𝙖𝙧𝙣𝙤𝙠",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:20",
+        "id": 1620489033157
+      },
+      "1620489101735": {
+        "Address": "𝘾𝙤𝙣𝙩𝙖𝙘𝙩 𝙩𝙝𝙚𝙢",
+        "Beds": "Available",
+        "Contact": "9073366676",
+        "Counter": 1,
+        "Description": "𝙄𝙘𝙪 𝙗𝙚𝙙𝙨 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙛𝙤𝙧 𝙖𝙙𝙢𝙞𝙨𝙨𝙞𝙤𝙣",
+        "Organization": "𝙄𝙧𝙞𝙨",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:21",
+        "id": 1620489101735
+      },
+      "1620489139330": {
+        "Address": "𝘾𝙤𝙣𝙩𝙖𝙘𝙩 𝙩𝙝𝙚𝙢",
+        "Beds": "Available",
+        "Contact": "83334922922",
+        "Counter": 1,
+        "Description": "𝙄𝙘𝙪 𝙗𝙚𝙙𝙨 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙛𝙤𝙧 𝙖𝙙𝙢𝙞𝙨𝙨𝙞𝙤𝙣",
+        "Organization": "𝙄𝙧𝙞𝙨𝙝",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:21",
+        "id": 1620489139330
+      },
+      "1620489227514": {
+        "Address": "Beds available for admission",
+        "Beds": "Available",
+        "Contact": "9073366676",
+        "Counter": 1,
+        "Description": "Beds available",
+        "Organization": "Irish",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:23",
+        "id": 1620489227514
+      },
+      "1620489292523": {
+        "Address": "Beds available for admission",
+        "Beds": "Available",
+        "Contact": "83334922922",
+        "Counter": 1,
+        "Description": "Beds available",
+        "Organization": "Irish",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:24",
+        "id": 1620489292523
+      },
+      "1620489337907": {
+        "Address": "Beds available for admission",
+        "Beds": "Available",
+        "Contact": "03340127000",
+        "Counter": 1,
+        "Description": "Beds available",
+        "Organization": "Kothari",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:25",
+        "id": 1620489337907
+      },
+      "1620489387720": {
+        "Address": "Beds available for admission",
+        "Beds": "Available",
+        "Contact": "03366520000",
+        "Counter": 1,
+        "Description": "Beds available",
+        "Organization": "Medica",
+        "Status": "Working",
+        "Verification": "2021-05-08T21:26",
+        "id": 1620489387720
+      },
+      "1620490139031": {
+        "Address": "BEHALA KOLKATA",
+        "Beds": "-",
+        "Contact": "6290619696",
+        "Counter": 1,
+        "Description": "OXYGEN BED ONLY",
+        "Organization": "APEX HOSPITAL",
+        "Status": "Working",
+        "Verification": "2021-05-08T19:30",
+        "id": 1620490139031
+      },
+      "1620490198646": {
+        "Address": "KOLKATA",
+        "Beds": "-",
+        "Contact": "8961022990",
+        "Counter": 1,
+        "Description": "ICU BED",
+        "Organization": "SUBHAYANI HOSPITAL",
+        "Status": "Working",
+        "Verification": "2021-05-08T19:30",
+        "id": 1620490198646
+      },
+      "1620490259000": {
+        "Address": "RAJARHAT",
+        "Beds": "55",
+        "Contact": "03323245012",
+        "Counter": 1,
+        "Description": "NORMAL BED",
+        "Organization": "CNCI HOSPITAL",
+        "Status": "Working",
+        "Verification": "2021-05-08T19:30",
+        "id": 1620490259000
+      },
+      "1620490323159": {
+        "Address": "MUKUNDAPUR",
+        "Beds": "16",
+        "Contact": "7044488841",
+        "Counter": 1,
+        "Description": "8-NORMAL BED , 8 OXYGEN",
+        "Organization": "MEDICA HOSPITAL",
+        "Status": "Working",
+        "Verification": "2021-05-08T19:30",
+        "id": 1620490323159
       }
     }
   },
@@ -5416,6 +5559,296 @@
         "Status": "Working",
         "Verification": "2021-05-08T00:30",
         "id": 1620461989853
+      },
+      "1620489516847": {
+        "Address": "Purulia",
+        "Contact": "6289160044",
+        "Counter": 1,
+        "Description": "-",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T11:00",
+        "id": 1620489516847
+      },
+      "1620489591068": {
+        "Address": "Kolkata",
+        "Contact": "7001029440",
+        "Counter": 1,
+        "Description": "-",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T02:00",
+        "id": 1620489591068
+      },
+      "1620489763133": {
+        "Address": "Mogra",
+        "Contact": "7003656667",
+        "Counter": 1,
+        "Description": "-",
+        "Organization": "Bibhutibhusan Roy",
+        "Status": "Working",
+        "Verification": "2021-05-08T02:00",
+        "id": 1620489763133
+      },
+      "1620489997881": {
+        "Address": "DumDum",
+        "Contact": "7003656667",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620489997881
+      },
+      "1620490039574": {
+        "Address": "Jadavpur",
+        "Contact": "7059484445",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490039574
+      },
+      "1620490087863": {
+        "Address": "Jadavpur",
+        "Contact": "7866833414",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490087863
+      },
+      "1620490140003": {
+        "Address": "Midnapur",
+        "Contact": "7980154348",
+        "Counter": 1,
+        "Description": "Cylinder",
+        "Organization": "Shymali Das",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490140003
+      },
+      "1620490182750": {
+        "Address": "Jadavpur",
+        "Contact": "7998109093",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490182750
+      },
+      "1620490266069": {
+        "Address": "Jadavpur",
+        "Contact": "7998109093",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490266069
+      },
+      "1620490314663": {
+        "Address": "Saltlake",
+        "Contact": "8017572968",
+        "Counter": 1,
+        "Description": "Cylinder",
+        "Organization": "Some NGO",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490314663
+      },
+      "1620490472586": {
+        "Address": "Krishnanagar",
+        "Contact": "8617076435",
+        "Counter": 1,
+        "Description": "Cylinder",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490472586
+      },
+      "1620490547454": {
+        "Address": "Baguiati/Nagerbazaar",
+        "Contact": "8697310965",
+        "Counter": 1,
+        "Description": "Cylinder",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490547454
+      },
+      "1620490608364": {
+        "Address": "Tollygunge",
+        "Contact": "8967280434",
+        "Counter": 1,
+        "Description": "Can",
+        "Organization": "Kuntal Ghosh",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490608364
+      },
+      "1620490663953": {
+        "Address": "Behala",
+        "Contact": "9007882261",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "Bilas Suvodip",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490663953
+      },
+      "1620490714579": {
+        "Address": "Kharagpur",
+        "Contact": "9064256818",
+        "Counter": 1,
+        "Description": "Refill+Cylinder",
+        "Organization": "Nandini Medical",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490714579
+      },
+      "1620490762597": {
+        "Address": "Kolkata",
+        "Contact": "9073562583",
+        "Counter": 1,
+        "Description": "Refill+Cylinder",
+        "Organization": "Sanjoy Halder",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490762597
+      },
+      "1620490826605": {
+        "Address": "South Kolkata",
+        "Contact": "9432362856",
+        "Counter": 1,
+        "Description": "-",
+        "Organization": "Sanjib Dey",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490826605
+      },
+      "1620490870906": {
+        "Address": "Kalyani",
+        "Contact": "943394461",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490870906
+      },
+      "1620490947033": {
+        "Address": "Berhampore",
+        "Contact": "9434041123",
+        "Counter": 1,
+        "Description": "Cylinder",
+        "Organization": "Aniruddha Ghosh",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490947033
+      },
+      "1620490982941": {
+        "Address": "Katwa",
+        "Contact": "9434311962",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620490982941
+      },
+      "1620491019919": {
+        "Address": "Jadavpur",
+        "Contact": "9478847715",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491019919
+      },
+      "1620491048062": {
+        "Address": "Asansol",
+        "Contact": "9558807674",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491048062
+      },
+      "1620491110361": {
+        "Address": "Baguiati/NagerBazaar",
+        "Contact": "9674371978",
+        "Counter": 1,
+        "Description": "Refill+Cylinder",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491110361
+      },
+      "1620491146631": {
+        "Address": "Barasat",
+        "Contact": "9748751456",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491146631
+      },
+      "1620491186926": {
+        "Address": "Jadavpur",
+        "Contact": "9830048199",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491186926
+      },
+      "1620491232375": {
+        "Address": "Baguiati/Nager Bazaar",
+        "Contact": "9830724094",
+        "Counter": 1,
+        "Description": "Cylinder",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491232375
+      },
+      "1620491266639": {
+        "Address": "Garia",
+        "Contact": "9874165254",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491266639
+      },
+      "1620491311463": {
+        "Address": "Jhargram",
+        "Contact": "9932673026",
+        "Counter": 1,
+        "Description": "Cylinder",
+        "Organization": "Subrata Maity",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491311463
+      },
+      "1620491344081": {
+        "Address": "Tollygunge",
+        "Contact": "9933037855",
+        "Counter": 1,
+        "Description": "Refill",
+        "Organization": "-",
+        "Status": "Working",
+        "Verification": "2021-05-08T07:00",
+        "id": 1620491344081
       }
     }
   },
