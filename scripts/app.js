@@ -672,3 +672,4 @@ if ('serviceWorker' in navigator) {
 
   let installAlert=document.querySelector(".install")
  
+
