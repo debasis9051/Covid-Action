@@ -240,7 +240,17 @@
 
 }
 
+input,select{
+    font-weight:bold;
+}
 
-    input,select
-    {font-weight:bold;}
+.cusStyle{
+    display: flex;
+}
+#Contact{
+    flex-basis: 85%;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
 
+   

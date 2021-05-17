@@ -71,6 +71,23 @@ function dataSubmit()
     for(let i=0;i<currentCatFieldId.length;i++)
         tempObj[currentCatFieldId[i]] = document.querySelector(`#${currentCatFieldId[i]}`).value.trim()
 
+    let elemArr = document.querySelectorAll(".additionalContacts")
+    let contactString = tempObj["Contact"].trim()
+    for(let i=0;i<elemArr.length;i++)
+    {
+        if(elemArr[i].value.trim() != "") 
+        {
+            if(contactString != "")
+            {
+                contactString += " / "
+            }
+            contactString += elemArr[i].value.trim()
+        }
+    }
+
+
+    tempObj["Contact"] = contactString
+
     if(checkInputs(tempObj))
     {
         let timeStamp = Date.now()
@@ -176,7 +193,7 @@ document.querySelector("#Category").addEventListener("change",(e)=>{
                             <div class="col-md-2"></div>
                             <div class="form-group col-md-4">
                                 <label for="${currentCatFieldId[j]}">${currentCatData[currentCatFieldId[j]][0]}</label>
-                                <input type="${currentCatData[currentCatFieldId[j]][1]}" class="form-control" id="${currentCatFieldId[j]}">
+                                <input type="${currentCatData[currentCatFieldId[j]][1]}" class="form-control" id="${currentCatFieldId[j]}"> 
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="${currentCatFieldId[j+1]}">${currentCatData[currentCatFieldId[j+1]][0]}</label>
@@ -189,7 +206,7 @@ document.querySelector("#Category").addEventListener("change",(e)=>{
         }
         
         if(j==currentCatFieldId.length-1)
-        {
+        {              
             let tr = `  <div class="form-row mt-3 ml-3 mr-3">
                             <div class="col-md-2"></div>
                             <div class="form-group col-md-4">
@@ -207,7 +224,33 @@ document.querySelector("#Category").addEventListener("change",(e)=>{
     }
 
     document.querySelector("#Fields").innerHTML = fieldsBody
+
+    let parent = document.querySelector("#Contact").parentElement
+    let newDiv = document.createElement("div")
+    newDiv.classList.add("cusStyle")
+    newDiv.appendChild(document.querySelector("#Contact"))
+    newDiv.innerHTML += `   <button class="btn btn-success  mb-2 mr-3" onclick="addContact()">+</button>
+                            <button class="btn btn-danger mb-2" onclick="removeContact()">-</button>`
+    parent.appendChild(newDiv)
+    
 })
+
+function addContact()
+{
+    let inp = document.createElement("input")
+    inp.type = "number"
+    inp.classList.add("form-control")
+    inp.classList.add("mb-3")
+    inp.classList.add("additionalContacts")
+    document.querySelector("#Contact").parentElement.parentElement.appendChild(inp)
+}
+function removeContact()
+{
+    if(document.querySelector("#Contact").parentElement.parentElement.lastElementChild.classList.contains("additionalContacts"))
+    {
+        document.querySelector("#Contact").parentElement.parentElement.lastElementChild.remove()
+    }
+}
 
 function startGiveLead()
 {

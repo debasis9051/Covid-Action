@@ -20,12 +20,6 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-  
-  // 1. column names
-  // 2. value keys
-  // 3. filter list with array positioning
-  // 4. sort list with [array positioning,type of filter]
-  // 5. modal verification custom field
 
 
   let mapArr = {"Oxygen" : [["Sl. No.", "Name of Organization/Dealer", "Contact number of Organization/Dealer", "Address/Area", "Description", "Latest Verification", "Status", "No. of times Verified","Actions"],
@@ -137,7 +131,7 @@ var firebaseConfig = {
           }
           tr2+= `<td class="flex1">
                     <button class="btn btn-success verifyLead" onclick="leadVerification(${Object.keys(vendorsDB)[i]})">Verify our Lead</button>
-                    <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
+                    <button class="btn btn-primary" onclick="callContacts('${currentData.Contact}')">Call</button>
                 </td>`
 
           tb+=tr2
@@ -393,7 +387,7 @@ var firebaseConfig = {
       }
       tr2+= `<td class="flex1">
                 <button class="btn btn-success verifyLead" onclick="leadVerification(${Object.keys(vendorsDB)[i]})">Verify our Lead</button>
-                <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
+                <button class="btn btn-primary" href="tel:${currentData.Contact}">Call</button>
             </td>`
 
       tb+=tr2
@@ -406,188 +400,32 @@ var firebaseConfig = {
     }
     document.querySelector("#exitSort").classList.add("d-none")
   }
-  // function filterData(filterCategory,filterText)
-  // {
-  //   if(filterCategory!="Select Category for Filter..")
-  //   {
-  //     document.querySelector("#exitFilter").classList.remove("d-none")
+  
+  function callContacts(inp)
+  {
+    let contactArr = inp.split(" / ")
 
-  //     let keyList
-  //     if(currentTableSort.length == 0)
-  //       keyList = Object.keys(vendorsDB)
-  //     else
-  //       keyList = currentTableSort
-      
-  //     let finalKeyList = []
-
-  //     let tb=""
-  //     for(let i=0,j=1;i<keyList.length;i++)
-  //     {
-  //         let currentKey = keyList[i]
-  //         let currentData = vendorsDB[currentKey];
-  //         let mapArr = {"Name of the Organization/Dealer" : currentData.Organization.toLowerCase() ,"Address/Area" : currentData.Address.toLowerCase() ,"Status" : currentData.Status.toLowerCase() ,"Latest Verification" : currentData.Verification}
-
-  //         let myCheck
-  //         if(filterCategory=="Status")
-  //         {
-  //           if(mapArr[filterCategory] === filterText.toLowerCase())
-  //             myCheck = true
-  //         }
-  //         else
-  //         {
-  //           if(mapArr[filterCategory].search(filterText.toLowerCase()) != -1)
-  //             myCheck = true
-  //         }
-
-  //         if(myCheck)
-  //         {
-  //           finalKeyList.push(currentKey)
-  //           let tr= `<tr>
-  //                       <td>${j}</td>
-  //                       <td>${currentData.Organization}</td>
-  //                       <td>${currentData.Contact}</td>
-  //                       <td>${currentData.Address}</td>
-  //                       <td>${currentData.Verification.replace("T"," @")}</td>
-  //                       <td>${currentData.Description}</td>
-  //                       <td>${currentData.Status}</td>
-  //                       <td>${currentData.Counter}</td>
-  //                       <td class="flex1">
-  //                           <button class="btn btn-success verifyLead" onclick="leadVerification(${currentKey})">Verify our Lead</button>
-  //                           <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
-  //                       </td>
-  //                   </tr>`
-  //           tb+=tr
-  //           j++
-  //         }
-  //     }
-
-  //     if(currentTableSort.length == 0)
-  //       currentTableFilter = finalKeyList
-
-  //     document.getElementById("tableBody").innerHTML = tb
-  //   }
-
-  // }
-
-  // function filterClose()
-  // {
-  //   currentTableFilter = []
-  //   if(document.querySelector("#exitSort").classList.contains("d-none"))
-  //   {
-  //     let temp2
-  //     if(document.querySelector("#hospitalCategory").classList.contains("highlighter"))
-  //       temp2="Hospital"
-  //     else if(document.querySelector("#oxygenCategory").classList.contains("highlighter"))
-  //       temp2="Oxygen"
-  //     else if(document.querySelector("#bloodCategory").classList.contains("highlighter"))
-  //       temp2="Blood"
-  //     else if(document.querySelector("#plasmaCategory").classList.contains("highlighter"))
-  //       temp2="Plasma"
-  //     else
-  //       console.log("Error in filterClose")
-  //     displayData(temp2)
-  //   }
-  //   else
-  //     sortData(document.querySelector("#sortCategory").value,document.querySelector("#sortOrder").value)
-    
-  //   document.querySelector("#exitFilter").classList.add("d-none")
-  // }
+    $("#myModal").modal('show')
+    document.querySelector(".modal-title").innerHTML = "Select a number to call:"
+    let mBody =""
+    for(let i=0;i<contactArr.length;i++)
+    {
+      mBody+= ` <div class="row my-1">
+                  <div class="col-sm-2"></div>
+                  <h4 class="col-sm-4 my-auto">${contactArr[i]}</h4>
+                  <div class="col-sm-2"></div>
+                  <a class="btn btn-warning col-sm-2" style="color: black;font-weight: bold;" href="tel:${contactArr[i]}">Call</a>
+                  <div class="col-sm-2"></div>
+                </div>`
+    }
+    document.querySelector(".modal-body").innerHTML = mBody
+    document.querySelector(".modal-footer").innerHTML = "<button type='button' class='btn btn-danger' data-dismiss='modal'>Close</button>"                                        
+  }
 
   function temp()
   {
     $("#myModal").modal('hide')
   }
-
-  // function sortData(sortCategory,sortOrder)
-  // {
-  //   if((sortCategory!="Select Category for Sorting..")&&(sortOrder!="Select Order for Sorting.."))
-  //   {
-  //     document.querySelector("#exitSort").classList.remove("d-none")
-
-  //     let keyList
-  //     if(currentTableFilter.length == 0)
-  //       keyList = Object.keys(vendorsDB)
-  //     else
-  //       keyList = currentTableFilter
-        
-
-  //     let valueList = []
-  //     for(let i=0;i<keyList.length;i++)
-  //     {
-  //       let mapArr ={"No. of times Verified" : vendorsDB[keyList[i]].Counter}
-  //       valueList[i] = mapArr[sortCategory]
-  //     }
-
-  //     let tempObjArr = []
-  //     for(let i=0;i<keyList.length;i++)
-  //     {
-  //       let temp2 = {}
-  //       temp2["key"] = keyList[i]
-  //       temp2["val"] = valueList[i]
-  //       tempObjArr.push(temp2)
-  //     }
-
-  //     tempObjArr.sort((a,b)=>{
-  //       if(sortOrder == "Ascending")
-  //         return a.val - b.val
-  //       else
-  //         return b.val - a.val
-  //     })
-
-  //     let finalKeyList = []
-  //     for(let i=0;i<tempObjArr.length;i++)
-  //       finalKeyList.push(tempObjArr[i].key)
-      
-  //     if(currentTableFilter.length == 0)
-  //       currentTableSort = finalKeyList
-
-  //     let tb=""
-  //     for(let i=0;i<finalKeyList.length;i++)        
-  //     {
-  //         let currentData = vendorsDB[finalKeyList[i]];
-  //         let tr= `<tr>
-  //                     <td>${i+1}</td>
-  //                     <td>${currentData.Organization}</td>
-  //                     <td>${currentData.Contact}</td>
-  //                     <td>${currentData.Address}</td>
-  //                     <td>${currentData.Verification.replace("T"," @")}</td>
-  //                     <td>${currentData.Description}</td>
-  //                     <td>${currentData.Status}</td>
-  //                     <td>${currentData.Counter}</td>
-  //                     <td class="flex1">
-  //                         <button class="btn btn-success verifyLead" onclick="leadVerification(${finalKeyList[i]})">Verify our Lead</button>
-  //                         <a class="btn btn-primary" href="tel:${currentData.Contact}">Call</a>
-  //                     </td>
-  //                 </tr>`
-  //         tb+=tr
-  //     }
-  //     document.getElementById("tableBody").innerHTML = tb
-  //   }
-  // }
-
-  // function sortClose()
-  // {
-  //   currentTableSort = []
-  //   if(document.querySelector("#exitFilter").classList.contains("d-none"))
-  //   {
-  //     let temp2
-  //     if(document.querySelector("#hospitalCategory").classList.contains("highlighter"))
-  //       temp2="Hospital"
-  //     else if(document.querySelector("#oxygenCategory").classList.contains("highlighter"))
-  //       temp2="Oxygen"
-  //     else if(document.querySelector("#bloodCategory").classList.contains("highlighter"))
-  //       temp2="Blood"
-  //     else if(document.querySelector("#plasmaCategory").classList.contains("highlighter"))
-  //       temp2="Plasma"
-  //     else
-  //       console.log("Error in filterClose")
-  //     displayData(temp2)
-  //   }
-  //   else
-  //     filterData(document.querySelector("#filterCategory").value,document.querySelector("#filterText").value)
-
-  //   document.querySelector("#exitSort").classList.add("d-none")
-  // }
 
 document.querySelector("#filterCategory").addEventListener("change",(e)=>{
   let currField = document.querySelector("#filterText")
