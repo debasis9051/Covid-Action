@@ -1,5 +1,6 @@
 contact data must be in this format Ex: 8482055025 / 97486402(if landline) Syntax: <[number 8/10 digit] / [number 8/10 digit] / ...>
-1. Format contact data in database and excel sheets for every categories present
+1. Landline 033 logic add
+2. Format contact data in database and excel sheets for every categories present
 
 a. Hospital                             Format contacts(Google spreadsheet + Database)     
 b. Oxygen                                                                                  
