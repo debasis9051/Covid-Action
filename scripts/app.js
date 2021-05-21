@@ -414,7 +414,7 @@ var firebaseConfig = {
                   <div class="col-sm-2"></div>
                   <h4 class="col-sm-4 my-auto">${contactArr[i]}</h4>
                   <div class="col-sm-2"></div>
-                  <a class="btn btn-warning col-sm-2" style="color: black;font-weight: bold;" href="tel:${contactArr[i]}">Call</a>
+                  <a class="btn btn-warning col-sm-2" style="color: black;font-weight: bold;" href="tel:${(contactArr[i].length==8)?"033":"91"}${contactArr[i]}">Call</a>
                   <div class="col-sm-2"></div>
                 </div>`
     }
